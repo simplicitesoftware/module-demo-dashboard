@@ -1,22 +1,28 @@
 var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (function($) {
-	function render(params, data) {
+	var params, data;
+	
+	function render(p, d) {
+		params = p;
+		data = d;
 		$ui.loadScript({
 			url: "https://www.gstatic.com/charts/loader.js",
 			onload: function() {
 				google.charts.load("current", { "packages": ["corechart", "bar", "geochart", "table", "gauge"], mapsApiKey: Simplicite.GOOGLE_API_KEY });
     			google.charts.setOnLoadCallback(function() {
-    				setTimeout(chart1, 0);
-    				setTimeout(chart2, 0);
-    				setTimeout(chart3, 0);
-    				setTimeout(chart4, 0);
-    				setTimeout(chart5, 0);
-    				setTimeout(chart6, 0);
+    				setTimeout(function() { chart1(data.chart1) }, 0);
+    				setTimeout(function() { chart2(data.chart2) }, 0);
+    				setTimeout(function() { chart3(data.chart3) }, 0);
+    				setTimeout(function() { chart4(data.chart4) }, 0);
+    				setTimeout(function() { chart5(data.chart5) }, 0);
+    				setTimeout(function() { chart6(data.chart6) }, 0);
     			});
 			}
 		});
 	}
 	
-	function chart1() {
+	function chart1(d) {
+		$("#demo-dashboard-title-1").text(d.title);
+
 		var data = google.visualization.arrayToDataTable([
 			['City', '2010 Population', '2000 Population'],
 			['New York City, NY', 8175000, 8008000],
@@ -36,7 +42,9 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
         new google.visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data, options);
 	}
 	
-	function chart2() {
+	function chart2(d) {
+		$("#demo-dashboard-title-2").text(d.title);
+		
 		var data = google.visualization.arrayToDataTable([
 			['Task', 'Hours per Day'],
 			['Work',     11],
@@ -51,7 +59,9 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
         new google.visualization.PieChart(document.getElementById('demo-dashboard-2')).draw(data, options);
 	}
 
-	function chart3() {
+	function chart3(d) {
+		$("#demo-dashboard-title-3").text(d.title);
+
 		var data = google.visualization.arrayToDataTable([
 			['Country',   'Population', 'Area Percentage'],
 			['France',  65700000, 50],
@@ -69,22 +79,34 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 		new google.visualization.GeoChart(document.getElementById('demo-dashboard-3')).draw(data, options);
       }
 
-	function chart4() {
-		var data = new google.visualization.DataTable();
-		data.addColumn('string', 'Name');
-		data.addColumn('number', 'Salary');
-		data.addColumn('boolean', 'Full Time Employee');
-		data.addRows([
-			['Mike',  {v: 10000, f: '$10,000'}, true],
-			['Jim',   {v:8000,   f: '$8,000'},  false],
-			['Alice', {v: 12500, f: '$12,500'}, true],
-			['Bob',   {v: 7000,  f: '$7,000'},  true]
-		]);
-		
-		new google.visualization.Table(document.getElementById('demo-dashboard-4')).draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	function chart4(d) {
+		$ui.getUIObject("DemoStats1", "dashboard_DemoStats1", function(sts) {
+			sts.getMetaData(function() {
+				$("#demo-dashboard-title-4").text(sts.getDisplay());
+
+				sts.search(function(rows) {
+					var data = new google.visualization.DataTable();
+					var status = sts.getField("demoOrdStatus");
+					data.addColumn("string", status.getDisplay());
+					data.addColumn("number", sts.getField("demoStsCount").getDisplay());
+					data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
+					data.addColumn("number", sts.getField("demoStsAmount").getDisplay());
+					for (var i = 0; i < rows.length; i++) {
+						var row = Object.values(rows[i]); // Transform to an array
+						row.shift(); // Remove row ID
+						row[0] = status.getDisplayValue(row[0]); // Display value instead of code
+						data.addRow(row);
+					}
+
+					new google.visualization.Table(document.getElementById('demo-dashboard-4')).draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+				});
+			});
+		});
 	}
 	
-	function chart5() {
+	function chart5(d) {
+		$("#demo-dashboard-title-5").text(d.title);
+
 		var data = google.visualization.arrayToDataTable([
 			['Mon', 28, 28, 38, 38],
 			['Tue', 38, 38, 55, 55],
@@ -106,7 +128,9 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 		new google.visualization.CandlestickChart(document.getElementById('demo-dashboard-5')).draw(data, options);
 	}
 
-	function chart6() {
+	function chart6(d) {
+		$("#demo-dashboard-title-6").text(d.title);
+
 		var data = google.visualization.arrayToDataTable([
 			['Label', 'Value'],
 			['Memory', 80],

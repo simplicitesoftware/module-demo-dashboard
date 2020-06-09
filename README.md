@@ -38,8 +38,8 @@ To import this module:
 - Click on the _Import module_ button
 
 
-`DemoStats` business object definition
---------------------------------------
+`DemoStats1` business object definition
+---------------------------------------
 
 Statistics (query object)
 

@@ -21,7 +21,7 @@ repositories {
 }
 
 group = 'com.simplicite.modules'
-version = '0.1'
+version = '4.0'
 description = 'Simplicite module: DemoDashboard'
 sourceCompatibility = '13'
 
