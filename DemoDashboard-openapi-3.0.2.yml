@@ -41,6 +41,10 @@ components:
         content:
           description: Content (plain text or base64 encoded)
           type: string
+    ArrayOfDemoStats2:
+      type: array
+      items:
+        $ref: '#/components/schemas/DemoStats2'
     Error400:
       type: object
       properties:
@@ -93,6 +97,24 @@ components:
           type: number
         row_id:
           description: Unique technical row ID
+          type: string
+        demoStsQuantity:
+          description: Ordered quantities
+          type: integer
+    DemoStats2:
+      type: object
+      properties:
+        demoStsCount:
+          description: Number of orders
+          type: integer
+        demoStsAmount:
+          description: Ordered amount
+          type: number
+        row_id:
+          description: Unique technical row ID
+          type: string
+        demoPrdName:
+          description: Product name
           type: string
         demoStsQuantity:
           description: Ordered quantities
@@ -439,6 +461,201 @@ paths:
         required: false
       tags:
       - DemoStats1
+  /rest/DemoStats2/{row_id}:
+    post:
+      summary: Create a new DemoStats2business object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DemoStats2'
+      operationId: obj-demostats2-create
+      responses:
+        '200':
+          description: Success in creating a new business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DemoStats2'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - DemoStats2
+    get:
+      summary: Get a DemoStats2 business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-demostats2-get
+      responses:
+        '200':
+          description: Success in getting a single business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DemoStats2'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_documents
+        description: Inline documents?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _inline_objects
+        description: Inline objects?
+        required: false
+      tags:
+      - DemoStats2
+    delete:
+      summary: Delete a DemoStats2 business object record
+      security:
+      - bearerAuth: []
+      operationId: obj-demostats2-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+          content:
+            application/json: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - DemoStats2
+    put:
+      summary: Update a DemoStats2business object record
+      security:
+      - bearerAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DemoStats2'
+      operationId: obj-demostats2-update
+      responses:
+        '200':
+          description: Success in updating a business object record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DemoStats2'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - DemoStats2
   /:
     get:
       summary: Get user session information
@@ -465,6 +682,77 @@ paths:
         required: false
       tags:
       - session
+  /rest/DemoStats2:
+    get:
+      summary: Search DemoStats2 business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      operationId: obj-demostats2-search
+      responses:
+        '200':
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ArrayOfDemoStats2'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+      parameters:
+      - schema:
+          type: boolean
+        in: query
+        name: _metadata
+        description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _doc
+        description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: demoPrdName
+        description: Search filter for Product name
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: demoStsCount
+        description: Search filter for Number of orders
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: demoStsQuantity
+        description: Search filter for Ordered quantities
+        required: false
+      - schema:
+          type: number
+        in: query
+        name: demoStsAmount
+        description: Search filter for Ordered amount
+        required: false
+      tags:
+      - DemoStats2
 info:
   license:
     name: Simplicite license
@@ -479,3 +767,5 @@ info:
 tags:
 - name: DemoStats1
   description: Statistics per statuses
+- name: DemoStats2
+  description: Statistics per product

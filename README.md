@@ -41,7 +41,7 @@ To import this module:
 `DemoStats1` business object definition
 ---------------------------------------
 
-Statistics (query object)
+Statistics per statuses
 
 ### Fields
 
@@ -59,6 +59,20 @@ Statistics (query object)
     - `V` Validated status
     - `D` Shipped status
     - `C` Canceled status
+
+`DemoStats2` business object definition
+---------------------------------------
+
+Stats per products
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `demoPrdName`                                                | char(100)                                | yes      | yes       |          | Product name                                                                     |
+| `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
+| `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
+| `demoStsAmount`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
 
 `DemoDashboard` external object definition
 ------------------------------------------

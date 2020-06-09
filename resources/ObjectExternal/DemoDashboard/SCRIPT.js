@@ -21,25 +21,32 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 	}
 	
 	function chart1(d) {
-		$("#demo-dashboard-title-1").text(d.title);
+		$ui.getUIObject("DemoStats2", "dashboard_DemoStats1", function(sts) {
+			sts.getMetaData(function() {
+				$("#demo-dashboard-title-1").text(sts.getDisplay());
 
-		var data = google.visualization.arrayToDataTable([
-			['City', '2010 Population', '2000 Population'],
-			['New York City, NY', 8175000, 8008000],
-			['Los Angeles, CA', 3792000, 3694000],
-			['Chicago, IL', 2695000, 2896000],
-			['Houston, TX', 2099000, 1953000],
-			['Philadelphia, PA', 1526000, 1517000]
-		]);
-		
-		var options = {
-			chartArea: {width: '50%'},
-			isStacked: true,
-			hAxis: { title: 'Total Population', minValue: 0 },
-			vAxis: { title: 'City' }
-		};
-        
-        new google.visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data, options);
+				var data = new google.visualization.DataTable();
+				var product = sts.getField("demoPrdName");
+				data.addColumn("string", product.getDisplay());
+				data.addColumn("number", sts.getField("demoStsCount").getDisplay());
+				data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
+
+				sts.search(function(rows) {
+					for (var i = 0; i < rows.length; i++) {
+						var row = Object.values(rows[i]); // Transform to an array
+						row.shift(); // Remove row ID
+						row.pop(); // Remove amounts
+						data.addRow(row);
+					}
+
+			        new google./*charts.Bar*/visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data, {
+						chartArea: { width:"60%" },
+						vAxis: { title: product.getDisplay() },
+						bars: 'horizontal'
+					});
+				});
+			});
+		});
 	}
 	
 	function chart2(d) {
@@ -84,13 +91,14 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 			sts.getMetaData(function() {
 				$("#demo-dashboard-title-4").text(sts.getDisplay());
 
+				var data = new google.visualization.DataTable();
+				var status = sts.getField("demoOrdStatus");
+				data.addColumn("string", status.getDisplay());
+				data.addColumn("number", sts.getField("demoStsCount").getDisplay());
+				data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
+				data.addColumn("number", sts.getField("demoStsAmount").getDisplay());
+
 				sts.search(function(rows) {
-					var data = new google.visualization.DataTable();
-					var status = sts.getField("demoOrdStatus");
-					data.addColumn("string", status.getDisplay());
-					data.addColumn("number", sts.getField("demoStsCount").getDisplay());
-					data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
-					data.addColumn("number", sts.getField("demoStsAmount").getDisplay());
 					for (var i = 0; i < rows.length; i++) {
 						var row = Object.values(rows[i]); // Transform to an array
 						row.shift(); // Remove row ID
@@ -98,7 +106,11 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 						data.addRow(row);
 					}
 
-					new google.visualization.Table(document.getElementById('demo-dashboard-4')).draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+					new google.visualization.Table(document.getElementById('demo-dashboard-4')).draw(data, {
+						showRowNumber: true,
+						width: "100%",
+						height: "100%"
+					});
 				});
 			});
 		});
