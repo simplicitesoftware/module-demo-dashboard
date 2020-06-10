@@ -1,6 +1,8 @@
 package com.simplicite.extobjects.DemoDashboard;
 
-import org.json.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import com.simplicite.util.Tool;
 import com.simplicite.util.tools.Parameters;
 
@@ -9,14 +11,14 @@ import com.simplicite.util.tools.Parameters;
  */
 public class DemoDashboard extends com.simplicite.webapp.web.ResponsiveExternalObject {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Override
 	public JSONObject getData(Parameters params) {
-		JSONObject chart1 = new JSONObject(); // Data is retreived thru Ajax calls on business object
-		JSONObject chart2 = new JSONObject(); // Data is retreived thru Ajax calls on business object
-		JSONObject chart3 = new JSONObject(); // Data is retreived thru Ajax calls on business object
-		JSONObject chart4 = new JSONObject(); // Data is retreived thru Ajax calls on business object
-		JSONObject chart5 = new JSONObject() // Example of custom query
+		JSONObject chart1 = new JSONObject(); // Data is retreived thru Ajax calls
+		JSONObject chart2 = new JSONObject(); // Data is retreived thru Ajax calls
+		JSONObject chart3 = new JSONObject(); // Data is retreived thru Ajax calls
+		JSONObject chart4 = new JSONObject(); // Data is retreived thru Ajax calls
+		JSONObject chart5 = new JSONObject()  // Example of custom server-side SQL query
 			.put("title", getGrant().T("DEMO_DASHBOARD_GAUGE_TITLE"))
 			.put("data", new JSONArray()
 				.put(new JSONObject()
