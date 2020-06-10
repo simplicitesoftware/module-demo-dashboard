@@ -77,8 +77,7 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 				new google.visualization.GeoChart(document.getElementById("demo-dashboard-3")).draw(data3, {
 					sizeAxis: { minValue: 0, maxValue: 100 },
 					region: "150", // Europe
-					displayMode: "markers",
-					colorAxis: { colors: ["#ff0000", "#00ff00"] }
+					colorAxis: { colors: ["#ff9900", "#109618"] }
 				});
 			}, tab.name);
 		});

@@ -207,7 +207,7 @@ To import this module:
 		<obe_help/>
 		<obe_class/>
 		<obe_script_id>src/com/simplicite/extobjects/DemoDashboard/DemoDashboard.java</obe_script_id>
-		<obe_icon/>
+		<obe_icon>img/color/pie_chart</obe_icon>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 </object>
