@@ -3,69 +3,66 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 	
 	function render(p, d) {
 		params = p;
+		console.log(d);
 		data = d;
 		$ui.loadScript({
 			url: "https://www.gstatic.com/charts/loader.js",
 			onload: function() {
 				google.charts.load("current", { "packages": ["corechart", "bar", "geochart", "table", "gauge"], mapsApiKey: Simplicite.GOOGLE_API_KEY });
     			google.charts.setOnLoadCallback(function() {
-    				setTimeout(function() { chart1(data.chart1) }, 0);
-    				setTimeout(function() { chart2(data.chart2) }, 0);
+    				setTimeout(function() { charts1and2(data.chart1, data.chart2) }, 0);
     				setTimeout(function() { chart3(data.chart3) }, 0);
     				setTimeout(function() { chart4(data.chart4) }, 0);
     				setTimeout(function() { chart5(data.chart5) }, 0);
-    				setTimeout(function() { chart6(data.chart6) }, 0);
     			});
 			}
 		});
 	}
 	
-	function chart1(d) {
+	function charts1and2(d1, d2) {
 		$ui.getUIObject("DemoStats2", "dashboard_DemoStats1", function(sts) {
 			sts.getMetaData(function() {
-				$("#demo-dashboard-title-1").text(sts.getDisplay());
-
-				var data = new google.visualization.DataTable();
 				var product = sts.getField("demoPrdName");
-				data.addColumn("string", product.getDisplay());
-				data.addColumn("number", sts.getField("demoStsCount").getDisplay());
-				data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
+				var count = sts.getField("demoStsCount");
+				var quantity = sts.getField("demoStsQuantity");
+				var amount = sts.getField("demoStsAmount");
+
+				$("#demo-dashboard-title-1").text(sts.getDisplay() + " (" + count.getDisplay() + " / " + quantity.getDisplay() + ")");
+				$("#demo-dashboard-title-2").text(sts.getDisplay() + " (" + amount.getDisplay() + ")");
+
+				var data1 = new google.visualization.DataTable();
+				data1.addColumn("string", product.getDisplay());
+				data1.addColumn("number", count.getDisplay());
+				data1.addColumn("number", quantity.getDisplay());
+
+				var data2 = new google.visualization.DataTable();
+				data2.addColumn("string", product.getDisplay());
+				data2.addColumn("number", amount.getDisplay());
 
 				sts.search(function(rows) {
 					for (var i = 0; i < rows.length; i++) {
 						var row = Object.values(rows[i]); // Transform to an array
 						row.shift(); // Remove row ID
 						row.pop(); // Remove amounts
-						data.addRow(row);
+						data1.addRow(row);
+						
+						data2.addRow([ rows[i].demoPrdName, rows[i].demoStsAmount ]);
 					}
 
-			        new google./*charts.Bar*/visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data, {
-						chartArea: { width:"60%" },
+			        new google.visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data1, {
+						chartArea: { width: "60%" },
 						vAxis: { title: product.getDisplay() },
-						bars: 'horizontal'
+						bars: "horizontal"
+					});
+					
+					new google.visualization.PieChart(document.getElementById('demo-dashboard-2')).draw(data2, {
+						pieHole: 0.2
 					});
 				});
 			});
 		});
 	}
 	
-	function chart2(d) {
-		$("#demo-dashboard-title-2").text(d.title);
-		
-		var data = google.visualization.arrayToDataTable([
-			['Task', 'Hours per Day'],
-			['Work',     11],
-			['Eat',      2],
-			['Commute',  2],
-			['Watch TV', 2],
-			['Sleep',    7]
-		]);
-		
-		var options = { pieHole: 0.2 };
-
-        new google.visualization.PieChart(document.getElementById('demo-dashboard-2')).draw(data, options);
-	}
-
 	function chart3(d) {
 		$("#demo-dashboard-title-3").text(d.title);
 
@@ -120,43 +117,17 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 		$("#demo-dashboard-title-5").text(d.title);
 
 		var data = google.visualization.arrayToDataTable([
-			['Mon', 28, 28, 38, 38],
-			['Tue', 38, 38, 55, 55],
-			['Wed', 55, 55, 77, 77],
-			['Thu', 77, 77, 66, 66],
-			['Fri', 66, 66, 22, 22]
-			// Treat the first row as data.
-		], true);
-		
-		var options = {
-			legend: 'none',
-			bar: { groupWidth: '100%' }, // Remove space between bars.
-			candlestick: {
-			fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
-			risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
-			}
-		};
-		
-		new google.visualization.CandlestickChart(document.getElementById('demo-dashboard-5')).draw(data, options);
-	}
-
-	function chart6(d) {
-		$("#demo-dashboard-title-6").text(d.title);
-
-		var data = google.visualization.arrayToDataTable([
 			['Label', 'Value'],
-			['Memory', 80],
-			['CPU', 55]
+			[d.data[0].label, d.data[0].value],
 		]);
 		
-		var options = {
-			width: 400, height: 120,
-			redFrom: 90, redTo: 100,
-			yellowFrom:75, yellowTo: 90,
+		new google.visualization.Gauge(document.getElementById('demo-dashboard-5')).draw(data, {
+			width: "100%", height: 150,
+			redFrom: 0, redTo: 50,
+			yellowFrom: 50, yellowTo: 75,
+			greenFrom: 75, greenTo: 100,
 			minorTicks: 5
-		};
-		
-		new google.visualization.Gauge(document.getElementById('demo-dashboard-6')).draw(data, options);
+		});
 	}
 
 	return { render: render };
