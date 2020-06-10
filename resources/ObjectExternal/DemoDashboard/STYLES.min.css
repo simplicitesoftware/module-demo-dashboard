@@ -1,1 +1,1 @@
-#demo-dashboard .col-sm,#demo-dashboard .col-md,#demo-dashboard .col-lg{padding:0 !important}#demo-dashboard .card{margin:4px}#demo-dashboard .card-header{font-weight:bold;color:#418cf0}#demo-dashboard .card-body{padding:0}
+#demo-dashboard .col-sm,#demo-dashboard .col-sm-6{padding:0 !important}#demo-dashboard .card,#demo-dashboard .panel{margin:4px}#demo-dashboard .card-header,#demo-dashboard .panel-header{font-weight:bold;color:#418cf0}#demo-dashboard .card-body,#demo-dashboard .panel-body{padding:0}
