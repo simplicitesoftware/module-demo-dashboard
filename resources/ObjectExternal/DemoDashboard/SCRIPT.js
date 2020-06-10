@@ -1,10 +1,5 @@
 var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (function($) {
-	var params, data;
-	
-	function render(p, d) {
-		params = p;
-		console.log(d);
-		data = d;
+	function render(params, data) {
 		$ui.loadScript({
 			url: "https://www.gstatic.com/charts/loader.js",
 			onload: function() {
@@ -45,13 +40,13 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 						data2.addRow([ rows[i].demoPrdName, rows[i].demoStsAmount ]);
 					}
 
-			        new google.visualization.BarChart(document.getElementById('demo-dashboard-1')).draw(data1, {
+			        new google.visualization.BarChart(document.getElementById("demo-dashboard-1")).draw(data1, {
 						chartArea: { width: "60%" },
 						vAxis: { title: product.getDisplay() },
 						bars: "horizontal"
 					});
 					
-					new google.visualization.PieChart(document.getElementById('demo-dashboard-2')).draw(data2, {
+					new google.visualization.PieChart(document.getElementById("demo-dashboard-2")).draw(data2, {
 						pieHole: 0.2
 					});
 				});
@@ -61,22 +56,19 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 	
 	function chart3(d) {
 		$("#demo-dashboard-title-3").text(d.title);
-
-		var data = google.visualization.arrayToDataTable([
-			['Country',   'Population', 'Area Percentage'],
-			['France',  65700000, 50],
-			['Germany', 81890000, 27],
-			['Poland',  38540000, 23]
-		]);
 		
-		var options = {
+		// TODO
+		new google.visualization.GeoChart(document.getElementById("demo-dashboard-3")).draw(google.visualization.arrayToDataTable([
+			["Country",   "Population", "Area Percentage"],
+			["France",  65700000, 50],
+			["Germany", 81890000, 27],
+			["Poland",  38540000, 23]
+		]), {
 			sizeAxis: { minValue: 0, maxValue: 100 },
-			region: '155', // Western Europe
-			displayMode: 'markers',
-			colorAxis: {colors: ['#e7711c', '#4374e0']} // orange to blue
-		};
-		
-		new google.visualization.GeoChart(document.getElementById('demo-dashboard-3')).draw(data, options);
+			region: "155", // Western Europe
+			displayMode: "markers",
+			colorAxis: {colors: ["#e7711c", "#4374e0"]} // orange to blue
+		});
       }
 
 	function chart4(d) {
@@ -84,22 +76,22 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 			sts.getMetaData(function() {
 				$("#demo-dashboard-title-4").text(sts.getDisplay());
 
-				var data = new google.visualization.DataTable();
+				var data4 = new google.visualization.DataTable();
 				var status = sts.getField("demoOrdStatus");
-				data.addColumn("string", status.getDisplay());
-				data.addColumn("number", sts.getField("demoStsCount").getDisplay());
-				data.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
-				data.addColumn("number", sts.getField("demoStsAmount").getDisplay());
+				data4.addColumn("string", status.getDisplay());
+				data4.addColumn("number", sts.getField("demoStsCount").getDisplay());
+				data4.addColumn("number", sts.getField("demoStsQuantity").getDisplay());
+				data4.addColumn("number", sts.getField("demoStsAmount").getDisplay());
 
 				sts.search(function(rows) {
 					for (var i = 0; i < rows.length; i++) {
 						var row = Object.values(rows[i]); // Transform to an array
 						row.shift(); // Remove row ID
 						row[0] = status.getDisplayValue(row[0]); // Display status value instead of code
-						data.addRow(row);
+						data4.addRow(row);
 					}
 
-					new google.visualization.Table(document.getElementById('demo-dashboard-4')).draw(data, {
+					new google.visualization.Table(document.getElementById("demo-dashboard-4")).draw(data4, {
 						showRowNumber: true,
 						width: "100%",
 						height: "100%"
@@ -112,12 +104,10 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 	function chart5(d) {
 		$("#demo-dashboard-title-5").text(d.title);
 
-		var data = google.visualization.arrayToDataTable([
+		new google.visualization.Gauge(document.getElementById("demo-dashboard-5")).draw(google.visualization.arrayToDataTable([
 			[ "Label", "Value" ],
 			[ d.data[0].label, d.data[0].value ],
-		]);
-		
-		new google.visualization.Gauge(document.getElementById('demo-dashboard-5')).draw(data, {
+		]), {
 			width: "100%", height: 150,
 			redFrom: 0, redTo: 50,
 			yellowFrom: 50, yellowTo: 75,

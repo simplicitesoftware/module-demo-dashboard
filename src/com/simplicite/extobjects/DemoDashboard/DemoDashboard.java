@@ -12,11 +12,11 @@ public class DemoDashboard extends com.simplicite.webapp.web.ResponsiveExternalO
 	
 	@Override
 	public JSONObject getData(Parameters params) {
-		JSONObject chart1 = new JSONObject(); // Data is got thru Ajax call
-		JSONObject chart2 = new JSONObject().put("title", "Pie chart example");
-		JSONObject chart3 = new JSONObject().put("title", "Google Maps example");
-		JSONObject chart4 = new JSONObject(); // Data is got thru Ajax call
-		JSONObject chart5 = new JSONObject()
+		JSONObject chart1 = new JSONObject(); // Data is retreived thru Ajax calls on business object
+		JSONObject chart2 = new JSONObject(); // Data is retreived thru Ajax calls on business object
+		JSONObject chart3 = new JSONObject(); // Data is retreived thru Ajax calls on business object
+		JSONObject chart4 = new JSONObject(); // Data is retreived thru Ajax calls on business object
+		JSONObject chart5 = new JSONObject() // Example of custom query
 			.put("title", getGrant().T("DEMO_DASHBOARD_GAUGE_TITLE"))
 			.put("data", new JSONArray()
 				.put(new JSONObject()
