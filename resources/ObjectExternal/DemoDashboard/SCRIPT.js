@@ -41,11 +41,7 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 
 				sts.search(function(rows) {
 					for (var i = 0; i < rows.length; i++) {
-						var row = Object.values(rows[i]); // Transform to an array
-						row.shift(); // Remove row ID
-						row.pop(); // Remove amounts
-						data1.addRow(row);
-						
+						data1.addRow([ rows[i].demoPrdName, rows[i].demoStsCount, rows[i].demoStsQuantity ]);
 						data2.addRow([ rows[i].demoPrdName, rows[i].demoStsAmount ]);
 					}
 
@@ -99,7 +95,7 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 					for (var i = 0; i < rows.length; i++) {
 						var row = Object.values(rows[i]); // Transform to an array
 						row.shift(); // Remove row ID
-						row[0] = status.getDisplayValue(row[0]); // Display value instead of code
+						row[0] = status.getDisplayValue(row[0]); // Display status value instead of code
 						data.addRow(row);
 					}
 
@@ -117,8 +113,8 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 		$("#demo-dashboard-title-5").text(d.title);
 
 		var data = google.visualization.arrayToDataTable([
-			['Label', 'Value'],
-			[d.data[0].label, d.data[0].value],
+			[ "Label", "Value" ],
+			[ d.data[0].label, d.data[0].value ],
 		]);
 		
 		new google.visualization.Gauge(document.getElementById('demo-dashboard-5')).draw(data, {
