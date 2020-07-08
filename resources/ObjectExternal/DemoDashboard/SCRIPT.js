@@ -1,5 +1,5 @@
-var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (function($) {
-	
+var DemoDashboard = DemoDashboard || (function($) {
+
 	function render(params, data) {
 		$ui.loadScript({
 			url: "https://www.gstatic.com/charts/loader.js",
@@ -144,4 +144,5 @@ var DemoDashboard = typeof DemoDashboard !== "undefined" ? DemoDashboard : (func
 	}
 
 	return { render: render };
+
 })(jQuery);
