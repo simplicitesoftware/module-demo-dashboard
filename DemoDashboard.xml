@@ -241,7 +241,7 @@ group by ord_status]]></obo_searchspec>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>0</obo_pagine>
-		<obo_srh_predef>0</obo_srh_predef>
+		<obo_srh_predef/>
 		<obo_selrow>0</obo_selrow>
 		<obo_updall>0</obo_updall>
 		<obo_delall>0</obo_delall>
@@ -310,7 +310,7 @@ group by prd.prd_name]]></obo_searchspec>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>0</obo_pagine>
-		<obo_srh_predef>0</obo_srh_predef>
+		<obo_srh_predef/>
 		<obo_selrow>0</obo_selrow>
 		<obo_updall>0</obo_updall>
 		<obo_delall>0</obo_delall>
