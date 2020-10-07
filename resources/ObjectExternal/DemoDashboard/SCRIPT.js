@@ -23,14 +23,14 @@ var DemoDashboard = DemoDashboard || (function($) {
 			var quantity = sts.getField("demoStsQuantity");
 			var amount = sts.getField("demoStsAmount");
 
-			$("#demo-dashboard-1").append($ui.view.tools.panel({
+			$("#DemoDashboard-1").append($ui.view.tools.panel({
 				title: sts.metadata.label + " (" + count.label + " / " + quantity.label + ")",
-				content: $("<div/>", { id: "demo-dashboard-chart1" })
+				content: $("<div/>", { id: "DemoDashboard-chart1" })
 			}));
 
-			$("#demo-dashboard-2").append($ui.view.tools.panel({
+			$("#DemoDashboard-2").append($ui.view.tools.panel({
 				title: sts.metadata.label + " (" + amount.label + ")",
-				content: $("<div/>", { id: "demo-dashboard-chart2" })
+				content: $("<div/>", { id: "DemoDashboard-chart2" })
 			}));
 
 			var data1 = new google.visualization.DataTable();
@@ -48,13 +48,13 @@ var DemoDashboard = DemoDashboard || (function($) {
 					data2.addRow([ rows[i].demoPrdName, rows[i].demoStsAmount ]);
 				}
 
-		        new google.visualization.BarChart(document.getElementById("demo-dashboard-chart1")).draw(data1, {
+		        new google.visualization.BarChart(document.getElementById("DemoDashboard-chart1")).draw(data1, {
 					chartArea: { width: "60%" },
 					vAxis: { title: product.label },
 					bars: "horizontal"
 				});
 				
-				new google.visualization.PieChart(document.getElementById("demo-dashboard-chart2")).draw(data2, {
+				new google.visualization.PieChart(document.getElementById("DemoDashboard-chart2")).draw(data2, {
 					pieHole: 0.2
 				});
 			});
@@ -66,9 +66,9 @@ var DemoDashboard = DemoDashboard || (function($) {
 		$ui.getUIObject("DemoOrder", "dashboard_DemoOrder", function(ord) {
 			var tab = ord.getPivotTable("DemoOrder-TC4");
 
-			$("#demo-dashboard-3").append($ui.view.tools.panel({
+			$("#DemoDashboard-3").append($ui.view.tools.panel({
 				title: tab.label,
-				content: $("<div/>", { id: "demo-dashboard-chart3" })
+				content: $("<div/>", { id: "DemoDashboard-chart3" })
 			}));
 
 			ord.getPivotTableData(function(cubes) {
@@ -84,7 +84,7 @@ var DemoDashboard = DemoDashboard || (function($) {
 					data3.addRow([ cubes[i].demoOrdCliId__demoCliCountry, cubes[i].demoOrdTotal, cubes[i].demoOrdTotal /  sum * 100 ]);
 				}
 				
-				new google.visualization.GeoChart(document.getElementById("demo-dashboard-chart3")).draw(data3, {
+				new google.visualization.GeoChart(document.getElementById("DemoDashboard-chart3")).draw(data3, {
 					sizeAxis: { minValue: 0, maxValue: 100 },
 					region: "150", // Europe
 					colorAxis: { colors: ["#ff9900", "#109618"] }
@@ -96,9 +96,9 @@ var DemoDashboard = DemoDashboard || (function($) {
 	// This chart is using a "select" objet
 	function chart4(d) {
 		$ui.getUIObject("DemoStats1", "dashboard_DemoStats1", function(sts) {
-			$("#demo-dashboard-4").append($ui.view.tools.panel({
+			$("#DemoDashboard-4").append($ui.view.tools.panel({
 				title: sts.metadata.label,
-				content: $("<div/>", { id: "demo-dashboard-chart4" })
+				content: $("<div/>", { id: "DemoDashboard-chart4" })
 			}));
 
 			var data4 = new google.visualization.DataTable();
@@ -116,7 +116,7 @@ var DemoDashboard = DemoDashboard || (function($) {
 					data4.addRow(row);
 				}
 
-				new google.visualization.Table(document.getElementById("demo-dashboard-chart4")).draw(data4, {
+				new google.visualization.Table(document.getElementById("DemoDashboard-chart4")).draw(data4, {
 					showRowNumber: true,
 					width: "100%", height: "100%"
 				});
@@ -126,12 +126,12 @@ var DemoDashboard = DemoDashboard || (function($) {
 	
 	// This chart is using a custom data provided by the server-side code
 	function chart5(d) {
-		$("#demo-dashboard-5").append($ui.view.tools.panel({
+		$("#DemoDashboard-5").append($ui.view.tools.panel({
 			title: d.title,
-			content: $("<div/>", { id: "demo-dashboard-chart5" })
+			content: $("<div/>", { id: "DemoDashboard-chart5" })
 		}));
 
-		new google.visualization.Gauge(document.getElementById("demo-dashboard-chart5")).draw(google.visualization.arrayToDataTable([
+		new google.visualization.Gauge(document.getElementById("DemoDashboard-chart5")).draw(google.visualization.arrayToDataTable([
 			[ "Label", "Value" ],
 			[ d.data[0].label, d.data[0].value ],
 		]), {

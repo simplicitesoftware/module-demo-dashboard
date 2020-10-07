@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>DemoDashboard</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix>demo</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -42,6 +42,15 @@ To import this module:
 
 - Click on the _Import module_ button
 ]]></mdl_comment>
+	</data>
+</object>
+<object>
+	<name>ModuleLink</name>
+	<action>upsert</action>
+	<data>
+		<mdk_parent_id.mdl_name>Demo</mdk_parent_id.mdl_name>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<mdk_cascad>C</mdk_cascad>
 	</data>
 </object>
 <object>
@@ -117,6 +126,7 @@ To import this module:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>EURO</fld_rendering>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Ordered amount]]></fld_comment>
@@ -153,6 +163,7 @@ To import this module:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -189,6 +200,7 @@ To import this module:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Ordered quantities]]></fld_comment>
@@ -274,6 +286,8 @@ group by ord_status]]></obo_searchspec>
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>0</obo_tray>
 		<obo_dashboard>0</obo_dashboard>
@@ -343,6 +357,8 @@ group by prd.prd_name]]></obo_searchspec>
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>0</obo_tray>
 		<obo_dashboard>0</obo_dashboard>

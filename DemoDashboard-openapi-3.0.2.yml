@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: DemoDashboard 4.0
+#             |_| Module: DemoDashboard 5
 components:
   schemas:
     Error404:
@@ -763,7 +763,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module DemoDashboard
   title: DemoDashboard
-  version: '4.0'
+  version: '5'
 tags:
 - name: DemoStats1
   description: Statistics per statuses
