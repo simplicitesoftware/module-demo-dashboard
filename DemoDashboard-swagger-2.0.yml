@@ -250,6 +250,18 @@ paths:
         type: boolean
         required: false
       - in: query
+        name: _crosstab
+        description: Apply pivot table
+        type: string
+        required: false
+        enum:
+        - DemoStats1-T1
+      - in: query
+        name: _crosstabcubes
+        description: Pivot table data as cubes?
+        type: boolean
+        required: false
+      - in: query
         name: demoOrdStatus
         description: Search filter for Order status
         type: string
@@ -257,6 +269,7 @@ paths:
         enum:
         - P
         - V
+        - H
         - D
         - C
       - in: query
@@ -611,6 +624,7 @@ definitions:
         enum:
         - P
         - V
+        - H
         - D
         - C
       demoStsCount:

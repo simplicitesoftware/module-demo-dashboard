@@ -87,6 +87,7 @@ components:
           enum:
           - P
           - V
+          - H
           - D
           - C
         demoStsCount:
@@ -433,8 +434,23 @@ paths:
       - schema:
           type: string
           enum:
+          - DemoStats1-T1
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: Pivot table data as cubes?
+        required: false
+      - schema:
+          type: string
+          enum:
           - P
           - V
+          - H
           - D
           - C
         in: query

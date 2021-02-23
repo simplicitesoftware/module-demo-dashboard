@@ -39,7 +39,6 @@ To import this module:
 
 - Click on the _Import module_ button
 
-
 `DemoStats1` business object definition
 ---------------------------------------
 
@@ -47,8 +46,8 @@ Statistics per statuses
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `demoOrdStatus`                                              | enum(30) using `DEMO_ORD_STATUS` list    | yes      | yes       |          | Order status                                                                     |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
 | `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
@@ -58,6 +57,7 @@ Statistics per statuses
 
 * `DEMO_ORD_STATUS`
     - `P` Pending status
+    - `H` On hold
     - `V` Validated status
     - `D` Shipped status
     - `C` Canceled status
@@ -69,8 +69,8 @@ Stats per products
 
 ### Fields
 
-| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
+|--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `demoPrdName`                                                | char(100)                                | yes      | yes       |          | Product name                                                                     |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
 | `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |

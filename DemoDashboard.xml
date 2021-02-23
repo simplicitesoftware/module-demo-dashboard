@@ -40,8 +40,7 @@ To import this module:
 }
 ```
 
-- Click on the _Import module_ button
-]]></mdl_comment>
+- Click on the _Import module_ button]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -109,7 +108,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -146,7 +145,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -183,7 +182,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -700,6 +699,67 @@ group by prd.prd_name]]></obo_searchspec>
 	</data>
 </object>
 <object>
+	<name>Crosstab</name>
+	<action>upsert</action>
+	<data>
+		<ctb_name>DemoStats1-T1</ctb_name>
+		<ctb_object_id.obo_name>DemoStats1</ctb_object_id.obo_name>
+		<ctb_function>S</ctb_function>
+		<ctb_grantable>0</ctb_grantable>
+		<ctb_visible>1</ctb_visible>
+		<ctb_fixedcolors>1</ctb_fixedcolors>
+		<ctb_precision>0</ctb_precision>
+		<ctb_subtotal>0</ctb_subtotal>
+		<ctb_totalcolor/>
+		<ctb_caption/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>CrosstabAxis</name>
+	<action>upsert</action>
+	<data>
+		<cax_crosstab_id.ctb_name>DemoStats1-T1</cax_crosstab_id.ctb_name>
+		<cax_objfield_id.obf_object_id.obo_name>DemoStats1</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_order>10</cax_objfield_id.obf_order>
+		<cax_objfield_id.obf_field_id.fld_name>demoOrdStatus</cax_objfield_id.obf_field_id.fld_name>
+		<cax_type>C</cax_type>
+		<cax_order>1</cax_order>
+		<cax_function/>
+		<cax_chart/>
+		<cax_precision/>
+		<cax_subtotal>0</cax_subtotal>
+		<cax_formula/>
+		<cax_hidden>0</cax_hidden>
+		<cax_objfield_id.obf_field_id.fld_type>7</cax_objfield_id.obf_field_id.fld_type>
+		<cax_dategroup/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<cax_unitscale/>
+		<cax_unitfunct/>
+		<cax_unitlabel/>
+	</data>
+	<data>
+		<cax_crosstab_id.ctb_name>DemoStats1-T1</cax_crosstab_id.ctb_name>
+		<cax_objfield_id.obf_object_id.obo_name>DemoStats1</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_order>20</cax_objfield_id.obf_order>
+		<cax_objfield_id.obf_field_id.fld_name>demoStsCount</cax_objfield_id.obf_field_id.fld_name>
+		<cax_type>V</cax_type>
+		<cax_order>1</cax_order>
+		<cax_function/>
+		<cax_chart/>
+		<cax_precision/>
+		<cax_subtotal>0</cax_subtotal>
+		<cax_formula/>
+		<cax_hidden>0</cax_hidden>
+		<cax_objfield_id.obf_field_id.fld_type>1</cax_objfield_id.obf_field_id.fld_type>
+		<cax_dategroup/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<cax_unitscale/>
+		<cax_unitfunct/>
+		<cax_unitlabel/>
+	</data>
+</object>
+<object>
 	<name>Map</name>
 	<action>upsert</action>
 	<data>
@@ -818,6 +878,24 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_file>resources/ObjectExternal/DemoDashboard/SCRIPT.js</res_file>
 		<res_file_compiled>resources/ObjectExternal/DemoDashboard/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
+	<name>TranslateCrosstab</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeCrosstab>C</tsl_typeCrosstab>
+		<tsl_id.ctb_name>DemoStats1-T1</tsl_id.ctb_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Stats.</tsl_value>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeCrosstab>C</tsl_typeCrosstab>
+		<tsl_id.ctb_name>DemoStats1-T1</tsl_id.ctb_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Stats.</tsl_value>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 </object>
