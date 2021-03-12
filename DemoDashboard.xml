@@ -737,6 +737,7 @@ group by prd.prd_name]]></obo_searchspec>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>DemoStats1-T1</cax_crosstab_id.ctb_name>
@@ -757,6 +758,7 @@ group by prd.prd_name]]></obo_searchspec>
 		<cax_unitscale/>
 		<cax_unitfunct/>
 		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
 	</data>
 </object>
 <object>
