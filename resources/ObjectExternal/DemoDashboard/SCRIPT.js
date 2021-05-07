@@ -1,4 +1,4 @@
-var DemoDashboard = DemoDashboard || (function($) {
+var DemoDashboard = (function() {
 
 	function render(params, data) {
 		$ui.loadScript({
@@ -145,4 +145,4 @@ var DemoDashboard = DemoDashboard || (function($) {
 
 	return { render: render };
 
-})(jQuery);
+})();
