@@ -13,7 +13,7 @@
 		"uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd/>
+		<mdl_type>C</mdl_type>
 		<mdl_comment><![CDATA[[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=simplicite-modules-DemoProject&metric=alert_status)](https://sonarcloud.io/dashboard?id=simplicite-modules-DemoProject)
 
 ### Introduction
@@ -228,6 +228,7 @@ To import this module:
 	<data>
 		<obo_name>DemoStats1</obo_name>
 		<obo_dbtable>select</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>0</obo_usets>
@@ -300,6 +301,7 @@ group by ord_status]]></obo_searchspec>
 	<data>
 		<obo_name>DemoStats2</obo_name>
 		<obo_dbtable>select</obo_dbtable>
+		<obo_role>OBJ</obo_role>
 		<obo_class/>
 		<obo_script_id/>
 		<obo_usets>0</obo_usets>
@@ -826,7 +828,6 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_code>demodashboard-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/demodashboard-module.svg</res_image>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -844,7 +845,6 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_code>demodashboard-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
-		<res_file_compiled/>
 		<res_image>resources/Disposition/default/demodashboard-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -862,7 +862,6 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_code>STYLES</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/STYLES.less</res_file>
-		<res_file_compiled>resources/ObjectExternal/DemoDashboard/STYLES.min.css</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -880,7 +879,6 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_code>HTML</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/HTML.html</res_file>
-		<res_file_compiled/>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -898,7 +896,6 @@ group by prd.prd_name]]></obo_searchspec>
 		<res_code>SCRIPT</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/SCRIPT.js</res_file>
-		<res_file_compiled>resources/ObjectExternal/DemoDashboard/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
