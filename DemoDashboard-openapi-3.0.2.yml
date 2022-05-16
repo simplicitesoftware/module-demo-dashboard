@@ -118,8 +118,8 @@ components:
           type: string
           enum:
           - P
-          - H
           - V
+          - H
           - D
           - C
         demoStsCount:
@@ -481,8 +481,8 @@ paths:
           type: string
           enum:
           - P
-          - H
           - V
+          - H
           - D
           - C
         in: query

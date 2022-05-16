@@ -1,4 +1,4 @@
-const DemoDashboard = (function() {
+var DemoDashboard = DemoDashboard || (function() {
 
 	function render(params, data) {
 		$ui.loadScript({
