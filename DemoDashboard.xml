@@ -241,7 +241,8 @@ To import this module:
 	sum(ord_quantity),
 	sum(ord_total)
 from demo_order
-group by ord_status]]></obo_searchspec>
+group by ord_status
+order by ord_status]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>
@@ -315,7 +316,8 @@ group by ord_status]]></obo_searchspec>
 	sum(ord.ord_total)
 from demo_order ord, demo_product prd
 where prd.row_id = ord.ord_prd_id
-group by prd.prd_name]]></obo_searchspec>
+group by prd.prd_name
+order by prd.prd_name]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder/>
 		<obo_distinct>0</obo_distinct>
