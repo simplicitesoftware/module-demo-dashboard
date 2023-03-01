@@ -50,8 +50,8 @@ Statistics per statuses
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
 | `demoOrdStatus`                                              | enum(30) using `DEMO_ORD_STATUS` list    | yes      | yes       |          | Order status                                                                     |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
-| `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
-| `demoStsAmount`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
+| `demoStsQuantities`                                          | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
+| `demoStsTotals`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
 
 ### Lists
 
@@ -75,8 +75,8 @@ Stats per products
 | _Ref. `demoStsRowId.demoPrdReference`_                       | _regexp(10)_                             |          |           |          | _Product reference_                                                              |
 | _Ref. `demoStsRowId.demoPrdName`_                            | _char(100)_                              |          |           |          | _Product name_                                                                   |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
-| `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
-| `demoStsAmount`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
+| `demoStsQuantities`                                          | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
+| `demoStsTotals`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
 
 `DemoDashboard` external object definition
 ------------------------------------------

@@ -96,45 +96,8 @@ To import this module:
 	<name>Field</name>
 	<action>upsert</action>
 	<data>
-		<fld_name>demoStsAmount</fld_name>
-		<fld_dbname/>
-		<fld_visible>3</fld_visible>
-		<fld_updatable>1</fld_updatable>
-		<fld_required>0</fld_required>
-		<fld_fonctid>0</fld_fonctid>
-		<fld_research>1</fld_research>
-		<fld_researchreq>0</fld_researchreq>
-		<fld_sort>C</fld_sort>
-		<fld_more>0</fld_more>
-		<fld_listmore>0</fld_listmore>
-		<fld_listsum>1</fld_listsum>
-		<fld_tray/>
-		<fld_type>2</fld_type>
-		<fld_type_id.flt_code/>
-		<fld_list_id.lov_name/>
-		<fld_copy>1</fld_copy>
-		<fld_size>10</fld_size>
-		<fld_minsize/>
-		<fld_precision>2</fld_precision>
-		<fld_fromdate_id.fld_name/>
-		<fld_dfault/>
-		<fld_indexable>0</fld_indexable>
-		<fld_autocomp>0</fld_autocomp>
-		<fld_groupby>0</fld_groupby>
-		<fld_updall>1</fld_updall>
-		<fld_case/>
-		<fld_righttoleft>0</fld_righttoleft>
-		<fld_rendering>EURO</fld_rendering>
-		<fld_speech/>
-		<fld_calc/>
-		<fld_objlist/>
-		<fld_comment><![CDATA[Ordered amount]]></fld_comment>
-		<fld_classification/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<fld_name>demoStsCount</fld_name>
-		<fld_dbname/>
+		<fld_name oldvalue="demoStsCount">demoStsCount</fld_name>
+		<fld_dbname>sts_count</fld_dbname>
 		<fld_visible>3</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>0</fld_required>
@@ -170,8 +133,8 @@ To import this module:
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fld_name>demoStsQuantity</fld_name>
-		<fld_dbname/>
+		<fld_name oldvalue="demoStsQuantity">demoStsQuantities</fld_name>
+		<fld_dbname>sts_quantities</fld_dbname>
 		<fld_visible>3</fld_visible>
 		<fld_updatable>1</fld_updatable>
 		<fld_required>0</fld_required>
@@ -243,6 +206,43 @@ To import this module:
 		<fld_classification/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
+	<data>
+		<fld_name oldvalue="demoStsAmount">demoStsTotals</fld_name>
+		<fld_dbname>sts_totals</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum>1</fld_listsum>
+		<fld_tray/>
+		<fld_type>2</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>10</fld_size>
+		<fld_minsize/>
+		<fld_precision>2</fld_precision>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering>EURO</fld_rendering>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment><![CDATA[Ordered amount]]></fld_comment>
+		<fld_classification/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
 </object>
 <object>
 	<name>ObjectExternal</name>
@@ -273,10 +273,10 @@ To import this module:
 		<obo_comment><![CDATA[Statistics per statuses]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[select
-	ord_status,
-	count(*),
-	sum(ord_quantity),
-	sum(ord_total)
+	ord_status as ord_status,
+	count(*) as sts_count,
+	sum(ord_quantity) as sts_quantities,
+	sum(ord_total) as sts_totals
 from demo_order
 group by ord_status
 order by ord_status]]></obo_searchspec>
@@ -347,12 +347,12 @@ order by ord_status]]></obo_searchspec>
 		<obo_comment><![CDATA[Stats per products]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec><![CDATA[select
-	prd.row_id,
-	prd.prd_code,
-	prd.prd_name,
-	count(*),
-	sum(ord.ord_quantity),
-	sum(ord.ord_total)
+	prd.row_id as row_id,
+	prd.prd_code as prd_code,
+	prd.prd_name as prd_name,
+	count(*) as sts_count,
+	sum(ord.ord_quantity) as sts_quantities,
+	sum(ord.ord_total) as sts_totals
 from demo_order ord, demo_product prd
 where prd.row_id = ord.ord_prd_id
 group by prd.row_id, prd.prd_code, prd.prd_name
@@ -477,7 +477,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats1</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoStsQuantity</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoStsQuantities</obf_field_id.fld_name>
 		<obf_field_id.fld_type>1</obf_field_id.fld_type>
 		<obf_order>30</obf_order>
 		<obf_group_by/>
@@ -506,7 +506,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats1</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoStsAmount</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoStsTotals</obf_field_id.fld_name>
 		<obf_field_id.fld_type>2</obf_field_id.fld_type>
 		<obf_order>40</obf_order>
 		<obf_group_by/>
@@ -651,7 +651,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoStsQuantity</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoStsQuantities</obf_field_id.fld_name>
 		<obf_field_id.fld_type>1</obf_field_id.fld_type>
 		<obf_order>50</obf_order>
 		<obf_group_by/>
@@ -680,7 +680,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoStsAmount</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoStsTotals</obf_field_id.fld_name>
 		<obf_field_id.fld_type>2</obf_field_id.fld_type>
 		<obf_order>60</obf_order>
 		<obf_group_by/>
@@ -1052,18 +1052,6 @@ order by prd.prd_name]]></obo_searchspec>
 	<action>upsert</action>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>demoStsAmount</tsl_id.fld_name>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Ordered amounts</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>demoStsCount</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Number of orders</tsl_value>
@@ -1076,7 +1064,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>demoStsQuantity</tsl_id.fld_name>
+		<tsl_id.fld_name>demoStsQuantities</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Ordered quantities</tsl_value>
 		<tsl_simplehelp/>
@@ -1100,9 +1088,9 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>demoStsAmount</tsl_id.fld_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Montants commandés</tsl_value>
+		<tsl_id.fld_name>demoStsTotals</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Ordered amounts</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -1124,7 +1112,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>demoStsQuantity</tsl_id.fld_name>
+		<tsl_id.fld_name>demoStsQuantities</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Quantités commandées</tsl_value>
 		<tsl_simplehelp/>
@@ -1139,6 +1127,18 @@ order by prd.prd_name]]></obo_searchspec>
 		<tsl_id.fld_name>demoStsRowId</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Row ID</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>demoStsTotals</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Montants commandés</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>

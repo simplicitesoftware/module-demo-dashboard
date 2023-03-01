@@ -279,12 +279,12 @@ paths:
         type: integer
         required: false
       - in: query
-        name: demoStsQuantity
+        name: demoStsQuantities
         description: Search filter for Ordered quantities
         type: integer
         required: false
       - in: query
-        name: demoStsAmount
+        name: demoStsTotals
         description: Search filter for Ordered amount
         type: number
         required: false
@@ -534,12 +534,12 @@ paths:
         type: integer
         required: false
       - in: query
-        name: demoStsQuantity
+        name: demoStsQuantities
         description: Search filter for Ordered quantities
         type: integer
         required: false
       - in: query
-        name: demoStsAmount
+        name: demoStsTotals
         description: Search filter for Ordered amount
         type: number
         required: false
@@ -670,16 +670,16 @@ definitions:
         - V
         - D
         - C
+      demoStsTotals:
+        description: Ordered amount
+        type: number
       demoStsCount:
         description: Number of orders
         type: integer
-      demoStsAmount:
-        description: Ordered amount
-        type: number
       row_id:
         description: Unique technical row ID
         type: string
-      demoStsQuantity:
+      demoStsQuantities:
         description: Ordered quantities
         type: integer
   DemoStats2:
@@ -688,24 +688,24 @@ definitions:
       demoStsRowId__demoPrdReference:
         description: Product reference
         type: string
+      demoStsTotals:
+        description: Ordered amount
+        type: number
       demoStsRowId__demoPrdName:
         description: Product name
         type: string
       demoStsCount:
         description: Number of orders
         type: integer
-      demoStsAmount:
-        description: Ordered amount
-        type: number
       row_id:
         description: Unique technical row ID
         type: string
-      demoStsQuantity:
-        description: Ordered quantities
-        type: integer
       demoStsRowId:
         description: Row ID
         type: string
+      demoStsQuantities:
+        description: Ordered quantities
+        type: integer
   Error403:
     type: object
     properties:
