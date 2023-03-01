@@ -71,7 +71,9 @@ Stats per products
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      |
 |--------------------------------------------------------------|------------------------------------------|----------|-----------|----------|----------------------------------------------------------------------------------|
-| `demoPrdName`                                                | char(100)                                | yes      | yes       |          | Product name                                                                     |
+| `demoStsRowId` link to **`DemoProduct`**                     | id                                       |          | yes       |          | -                                                                                |
+| _Ref. `demoStsRowId.demoPrdReference`_                       | _regexp(10)_                             |          |           |          | _Product reference_                                                              |
+| _Ref. `demoStsRowId.demoPrdName`_                            | _char(100)_                              |          |           |          | _Product name_                                                                   |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
 | `demoStsQuantity`                                            | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
 | `demoStsAmount`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |

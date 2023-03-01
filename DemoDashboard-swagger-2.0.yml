@@ -3,6 +3,7 @@
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
 #             |_| Module: DemoDashboard 5
+basePath: /api
 paths:
   /login:
     get:
@@ -513,7 +514,17 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: demoPrdName
+        name: demoStsRowId
+        description: Search filter for Row ID
+        type: string
+        required: false
+      - in: query
+        name: demoStsRowId__demoPrdReference
+        description: Search filter for Product reference
+        type: string
+        required: false
+      - in: query
+        name: demoStsRowId__demoPrdName
         description: Search filter for Product name
         type: string
         required: false
@@ -674,6 +685,12 @@ definitions:
   DemoStats2:
     type: object
     properties:
+      demoStsRowId__demoPrdReference:
+        description: Product reference
+        type: string
+      demoStsRowId__demoPrdName:
+        description: Product name
+        type: string
       demoStsCount:
         description: Number of orders
         type: integer
@@ -683,12 +700,12 @@ definitions:
       row_id:
         description: Unique technical row ID
         type: string
-      demoPrdName:
-        description: Product name
-        type: string
       demoStsQuantity:
         description: Ordered quantities
         type: integer
+      demoStsRowId:
+        description: Row ID
+        type: string
   Error403:
     type: object
     properties:

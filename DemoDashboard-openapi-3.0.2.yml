@@ -137,6 +137,12 @@ components:
     DemoStats2:
       type: object
       properties:
+        demoStsRowId__demoPrdReference:
+          description: Product reference
+          type: string
+        demoStsRowId__demoPrdName:
+          description: Product name
+          type: string
         demoStsCount:
           description: Number of orders
           type: integer
@@ -146,12 +152,12 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
-        demoPrdName:
-          description: Product name
-          type: string
         demoStsQuantity:
           description: Ordered quantities
           type: integer
+        demoStsRowId:
+          description: Row ID
+          type: string
     Error403:
       type: object
       properties:
@@ -171,6 +177,8 @@ components:
       bearerFormat: Simplicite token
       scheme: bearer
       type: http
+servers:
+- url: /api
 openapi: 3.0.2
 paths:
   /login:
@@ -778,7 +786,19 @@ paths:
       - schema:
           type: string
         in: query
-        name: demoPrdName
+        name: demoStsRowId
+        description: Search filter for Row ID
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: demoStsRowId__demoPrdReference
+        description: Search filter for Product reference
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: demoStsRowId__demoPrdName
         description: Search filter for Product name
         required: false
       - schema:

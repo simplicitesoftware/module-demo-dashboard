@@ -18,7 +18,7 @@ var DemoDashboard = DemoDashboard || (function() {
 	// These two charts are using a "select" object
 	function charts1and2(d1, d2) {
 		$ui.getUIObject("DemoStats2", "dashboard_DemoStats2", function(sts) {
-			const product = sts.getField("demoPrdName");
+			const product = sts.getField("demoStsRowId__demoPrdName");
 			const count = sts.getField("demoStsCount");
 			const quantity = sts.getField("demoStsQuantity");
 			const amount = sts.getField("demoStsAmount");
@@ -44,8 +44,8 @@ var DemoDashboard = DemoDashboard || (function() {
 
 			sts.search(function(rows) {
 				for (const row of rows) {
-					data1.addRow([ row.demoPrdName, row.demoStsCount, row.demoStsQuantity ]);
-					data2.addRow([ row.demoPrdName, row.demoStsAmount ]);
+					data1.addRow([ row.demoStsRowId__demoPrdName, row.demoStsCount, row.demoStsQuantity ]);
+					data2.addRow([ row.demoStsRowId__demoPrdName, row.demoStsAmount ]);
 				}
 
 				new google.visualization.BarChart(document.getElementById("DemoDashboard-chart1")).draw(data1, {
