@@ -20,8 +20,8 @@ var DemoDashboard = DemoDashboard || (function() {
 		$ui.getUIObject("DemoStats2", "dashboard_DemoStats2", function(sts) {
 			const product = sts.getField("demoStsRowId__demoPrdName");
 			const count = sts.getField("demoStsCount");
-			const quantity = sts.getField("demoStsQuantity");
-			const amount = sts.getField("demoStsAmount");
+			const quantity = sts.getField("demoStsQuantities");
+			const total = sts.getField("demoStsTotals");
 
 			$("#DemoDashboard-1").append($ui.view.tools.panel({
 				title: sts.metadata.label + " (" + count.label + " / " + quantity.label + ")",
@@ -29,7 +29,7 @@ var DemoDashboard = DemoDashboard || (function() {
 			}));
 
 			$("#DemoDashboard-2").append($ui.view.tools.panel({
-				title: sts.metadata.label + " (" + amount.label + ")",
+				title: sts.metadata.label + " (" + total.label + ")",
 				content: $("<div/>", { id: "DemoDashboard-chart2" })
 			}));
 
@@ -40,12 +40,12 @@ var DemoDashboard = DemoDashboard || (function() {
 
 			const data2 = new google.visualization.DataTable();
 			data2.addColumn("string", product.label);
-			data2.addColumn("number", amount.label);
+			data2.addColumn("number", total.label);
 
 			sts.search(function(rows) {
 				for (const row of rows) {
-					data1.addRow([ row.demoStsRowId__demoPrdName, row.demoStsCount, row.demoStsQuantity ]);
-					data2.addRow([ row.demoStsRowId__demoPrdName, row.demoStsAmount ]);
+					data1.addRow([ row.demoStsRowId__demoPrdName, row.demoStsCount, row.demoStsQuantities ]);
+					data2.addRow([ row.demoStsRowId__demoPrdName, row.demoStsTotals ]);
 				}
 
 				new google.visualization.BarChart(document.getElementById("DemoDashboard-chart1")).draw(data1, {
@@ -105,8 +105,8 @@ var DemoDashboard = DemoDashboard || (function() {
 			const status = sts.getField("demoOrdStatus");
 			data4.addColumn("string", status.label);
 			data4.addColumn("number", sts.getField("demoStsCount").label);
-			data4.addColumn("number", sts.getField("demoStsQuantity").label);
-			data4.addColumn("number", sts.getField("demoStsAmount").label);
+			data4.addColumn("number", sts.getField("demoStsQuantities").label);
+			data4.addColumn("number", sts.getField("demoStsTotals").label);
 
 			sts.search(function(rows) {
 				for (const row of rows) {
