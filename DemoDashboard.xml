@@ -1401,7 +1401,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<tsl_id.obf_field_id.fld_name>demoPrdName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>120</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Product nae</tsl_value>
+		<tsl_value>Product name</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_listhelp/>
