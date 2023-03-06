@@ -152,6 +152,12 @@ components:
         row_id:
           description: Unique technical row ID
           type: string
+        demoStsRowId__demoPrdAvailable:
+          description: Available product?
+          type: boolean
+        demoStsRowId__demoPrdStock:
+          description: Current stock for product
+          type: integer
         demoStsRowId:
           description: Row ID
           type: string
@@ -231,6 +237,53 @@ paths:
                 $ref: '#/components/schemas/Error401'
       tags:
       - session
+  /rest/DemoStats2/{row_id}/action:DEMO_STS2_AVAILABLE:
+    get:
+      summary: Call a custom action for a DemoStats2 business object record or for
+        all records
+      security:
+      - bearerAuth: []
+      operationId: obj-demostats2-action-demo_sts2_available
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - DemoStats2
   /rest/DemoStats1/{row_id}:
     post:
       summary: Create a new DemoStats1business object record
@@ -426,6 +479,53 @@ paths:
         required: true
       tags:
       - DemoStats1
+  /rest/DemoStats2/{row_id}/action:DEMO_STS2_NOT_AVAILABLE:
+    get:
+      summary: Call a custom action for a DemoStats2 business object record or for
+        all records
+      security:
+      - bearerAuth: []
+      operationId: obj-demostats2-action-demo_sts2_not_available
+      responses:
+        '200':
+          description: Success in calling the custom action
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActionResult'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error400'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error401'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error500'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error404'
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        required: true
+      tags:
+      - DemoStats2
   /rest/DemoStats1:
     get:
       summary: Search DemoStats1 business object records or get contextualized metadata
@@ -800,6 +900,18 @@ paths:
         in: query
         name: demoStsRowId__demoPrdName
         description: Search filter for Product name
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: demoStsRowId__demoPrdAvailable
+        description: Search filter for Available product?
+        required: false
+      - schema:
+          type: integer
+        in: query
+        name: demoStsRowId__demoPrdStock
+        description: Search filter for Current stock for product
         required: false
       - schema:
           type: integer

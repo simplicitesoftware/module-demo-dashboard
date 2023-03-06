@@ -50,6 +50,44 @@ paths:
           description: Unauthorized
       tags:
       - session
+  /rest/DemoStats2/{row_id}/action:DEMO_STS2_AVAILABLE:
+    get:
+      summary: Call a custom action for a DemoStats2 business object record or for
+        all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-demostats2-action-demo_sts2_available
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ActionResult'
+          description: Success in calling the custom action
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - DemoStats2
   /rest/DemoStats1/{row_id}:
     post:
       summary: Create a new DemoStats1business object record
@@ -212,6 +250,44 @@ paths:
       - DemoStats1
       consumes:
       - application/json
+  /rest/DemoStats2/{row_id}/action:DEMO_STS2_NOT_AVAILABLE:
+    get:
+      summary: Call a custom action for a DemoStats2 business object record or for
+        all records
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-demostats2-action-demo_sts2_not_available
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ActionResult'
+          description: Success in calling the custom action
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - DemoStats2
   /rest/DemoStats1:
     get:
       summary: Search DemoStats1 business object records or get contextualized metadata
@@ -529,6 +605,16 @@ paths:
         type: string
         required: false
       - in: query
+        name: demoStsRowId__demoPrdAvailable
+        description: Search filter for Available product?
+        type: boolean
+        required: false
+      - in: query
+        name: demoStsRowId__demoPrdStock
+        description: Search filter for Current stock for product
+        type: integer
+        required: false
+      - in: query
         name: demoStsCount
         description: Search filter for Number of orders
         type: integer
@@ -700,6 +786,12 @@ definitions:
       row_id:
         description: Unique technical row ID
         type: string
+      demoStsRowId__demoPrdAvailable:
+        description: Available product?
+        type: boolean
+      demoStsRowId__demoPrdStock:
+        description: Current stock for product
+        type: integer
       demoStsRowId:
         description: Row ID
         type: string
