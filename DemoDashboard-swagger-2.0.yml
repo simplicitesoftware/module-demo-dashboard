@@ -90,7 +90,7 @@ paths:
       - DemoStats2
   /rest/DemoStats1/{row_id}:
     post:
-      summary: Create a new DemoStats1business object record
+      summary: Create a new DemoStats1 business object record
       security:
       - bearerAuth: []
       produces:
@@ -209,7 +209,7 @@ paths:
       tags:
       - DemoStats1
     put:
-      summary: Update a DemoStats1business object record
+      summary: Update a DemoStats1 business object record
       security:
       - bearerAuth: []
       produces:
@@ -368,7 +368,7 @@ paths:
       - DemoStats1
   /rest/DemoStats2/{row_id}:
     post:
-      summary: Create a new DemoStats2business object record
+      summary: Create a new DemoStats2 business object record
       security:
       - bearerAuth: []
       produces:
@@ -487,7 +487,7 @@ paths:
       tags:
       - DemoStats2
     put:
-      summary: Update a DemoStats2business object record
+      summary: Update a DemoStats2 business object record
       security:
       - bearerAuth: []
       produces:

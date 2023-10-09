@@ -6,10 +6,10 @@ var DemoDashboard = DemoDashboard || (function() {
 			onload: function() {
 				google.charts.load("current", { "packages": ["corechart", "bar", "geochart", "table", "gauge"], mapsApiKey: Simplicite.GOOGLE_API_KEY });
 				google.charts.setOnLoadCallback(function() {
-					setTimeout(function() { charts1and2(data.chart1, data.chart2) }, 0);
-					setTimeout(function() { chart3(data.chart3) }, 0);
-					setTimeout(function() { chart4(data.chart4) }, 0);
-					setTimeout(function() { chart5(data.chart5) }, 0);
+					setTimeout(function() { charts1and2(data.chart1, data.chart2); }, 0);
+					setTimeout(function() { chart3(data.chart3); }, 0);
+					setTimeout(function() { chart4(data.chart4); }, 0);
+					setTimeout(function() { chart5(data.chart5);}, 0);
 				});
 			}
 		});

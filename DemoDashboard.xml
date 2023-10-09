@@ -108,6 +108,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
+		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
@@ -131,6 +132,7 @@ To import this module:
 		<fld_comment/>
 		<fld_classification/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<fld_incrementsyntax/>
 	</data>
 	<data>
 		<fld_name oldvalue="demoStsQuantity">demoStsQuantities</fld_name>
@@ -145,6 +147,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
+		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
@@ -168,6 +171,7 @@ To import this module:
 		<fld_comment><![CDATA[Ordered quantities]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<fld_incrementsyntax/>
 	</data>
 	<data>
 		<fld_name>demoStsRowId</fld_name>
@@ -182,6 +186,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
@@ -205,6 +210,7 @@ To import this module:
 		<fld_comment/>
 		<fld_classification/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<fld_incrementsyntax/>
 	</data>
 	<data>
 		<fld_name oldvalue="demoStsAmount">demoStsTotals</fld_name>
@@ -219,6 +225,7 @@ To import this module:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
+		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
@@ -242,6 +249,7 @@ To import this module:
 		<fld_comment><![CDATA[Ordered amount]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<fld_incrementsyntax/>
 	</data>
 </object>
 <object>
@@ -287,7 +295,6 @@ order by ord_status]]></obo_searchspec>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
 		<obo_template_id.tpl_name/>
-		<obo_cache>D</obo_cache>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>0</obo_pagine>
@@ -313,6 +320,7 @@ order by ord_status]]></obo_searchspec>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obo_btn_reload>P</obo_btn_reload>
 		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_bookmark>1</obo_btn_bookmark>
 		<obo_btn_del>P</obo_btn_del>
 		<obo_btn_copy>P</obo_btn_copy>
 		<obo_btn_export>P</obo_btn_export>
@@ -366,7 +374,6 @@ order by prd.prd_name]]></obo_searchspec>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
 		<obo_template_id.tpl_name/>
-		<obo_cache>D</obo_cache>
 		<obo_copy>0</obo_copy>
 		<obo_export>1</obo_export>
 		<obo_pagine>0</obo_pagine>
@@ -392,6 +399,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obo_btn_reload>P</obo_btn_reload>
 		<obo_btn_prefs>P</obo_btn_prefs>
+		<obo_btn_bookmark>1</obo_btn_bookmark>
 		<obo_btn_del>P</obo_btn_del>
 		<obo_btn_copy>P</obo_btn_copy>
 		<obo_btn_export>P</obo_btn_export>
@@ -444,6 +452,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[P]]></obf_field_id.fld_dfault>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -473,6 +484,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -502,6 +516,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -531,6 +548,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -560,6 +580,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -589,6 +612,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -618,6 +644,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -647,6 +676,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[1]]></obf_field_id.fld_dfault>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -676,6 +708,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -705,6 +740,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -734,6 +772,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -763,6 +804,9 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_field_id.fld_exportable>1</obf_field_id.fld_exportable>
+		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<obf_area_id.ofa_position/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
@@ -784,6 +828,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_cascad>Z</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_query/>
+		<obf_filters/>
 		<obf_visible>1</obf_visible>
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy>0</obf_copy>
@@ -817,6 +862,8 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_exec>BCK</act_exec>
 		<act_count/>
 		<act_order>1</act_order>
+		<act_color/>
+		<act_color_bg/>
 	</data>
 	<data>
 		<act_name>DEMO_STS2_NOT_AVAILABLE</act_name>
@@ -836,6 +883,8 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_exec>BCK</act_exec>
 		<act_count/>
 		<act_order>2</act_order>
+		<act_color/>
+		<act_color_bg/>
 	</data>
 </object>
 <object>
