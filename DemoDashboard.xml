@@ -852,7 +852,6 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_method>available</act_method>
 		<act_script/>
 		<act_url/>
-		<act_image>icon/color/tick</act_image>
 		<act_confirm>0</act_confirm>
 		<act_confirm_expr/>
 		<act_confirm_ui/>
@@ -864,6 +863,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_order>1</act_order>
 		<act_color/>
 		<act_color_bg/>
+		<act_image>icon/color/tick</act_image>
 	</data>
 	<data>
 		<act_name>DEMO_STS2_NOT_AVAILABLE</act_name>
@@ -873,7 +873,6 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_method>notAvailable</act_method>
 		<act_script/>
 		<act_url/>
-		<act_image>icon/color/delete3</act_image>
 		<act_confirm>0</act_confirm>
 		<act_confirm_expr/>
 		<act_confirm_ui/>
@@ -885,6 +884,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<act_order>2</act_order>
 		<act_color/>
 		<act_color_bg/>
+		<act_image>icon/color/delete3</act_image>
 	</data>
 </object>
 <object>
