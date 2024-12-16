@@ -2,27 +2,29 @@
 // Client side JavaScript for dashboard
 //-----------------------------------------------------------
 
-class DemoDashboard {
+/* global google */
+
+class DemoDashboard { // eslint-disable-line no-unused-vars
 	static render(params, data) {
 		$ui.loadScript({
 			url: 'https://www.gstatic.com/charts/loader.js',
 			onload: function() {
 				// These two charts are using a "select" object
-				const charts1and2 = (d1, d2) => {
+				const charts1and2 = (_d1, _d2) => {
 					$ui.getUIObject('DemoStats2', 'dashboard_DemoStats2', function(sts) {
 						const product = sts.getField('demoStsRowId__demoPrdName');
 						const count = sts.getField('demoStsCount');
 						const quantity = sts.getField('demoStsQuantities');
 						const total = sts.getField('demoStsTotals');
 
-						$('#DemoDashboard-1').append($ui.view.tools.panel({
+						$('#demodashboard-1').append($ui.view.tools.panel({
 							title: sts.metadata.label + ' (' + count.label + ' / ' + quantity.label + ')',
-							content: $('<div/>', { id: 'DemoDashboard-chart1' })
+							content: $('<div/>', { id: 'demodashboard-chart1' })
 						}));
 
-						$('#DemoDashboard-2').append($ui.view.tools.panel({
+						$('#demodashboard-2').append($ui.view.tools.panel({
 							title: sts.metadata.label + ' (' + total.label + ')',
-							content: $('<div/>', { id: 'DemoDashboard-chart2' })
+							content: $('<div/>', { id: 'demodashboard-chart2' })
 						}));
 
 						const data1 = new google.visualization.DataTable();
@@ -40,13 +42,13 @@ class DemoDashboard {
 								data2.addRow([ row.demoStsRowId__demoPrdName, row.demoStsTotals ]);
 							}
 
-							new google.visualization.BarChart(document.getElementById('DemoDashboard-chart1')).draw(data1, {
+							new google.visualization.BarChart(document.getElementById('demodashboard-chart1')).draw(data1, {
 								chartArea: { width: '60%' },
 								vAxis: { title: product.label },
 								bars: 'horizontal'
 							});
 
-							new google.visualization.PieChart(document.getElementById('DemoDashboard-chart2')).draw(data2, {
+							new google.visualization.PieChart(document.getElementById('demodashboard-chart2')).draw(data2, {
 								pieHole: 0.2
 							});
 						});
@@ -54,13 +56,13 @@ class DemoDashboard {
 				};
 
 				// This chart is using pivot table data
-				const chart3 = d => {
+				const chart3 = _d => {
 					$ui.getUIObject('DemoOrder', 'dashboard_DemoOrder', function(ord) {
 						const tab = ord.getPivotTable('DemoOrder-TC4');
 
-						$('#DemoDashboard-3').append($ui.view.tools.panel({
+						$('#demodashboard-3').append($ui.view.tools.panel({
 							title: tab.label,
-							content: $('<div/>', { id: 'DemoDashboard-chart3' })
+							content: $('<div/>', { id: 'demodashboard-chart3' })
 						}));
 
 						ord.getPivotTableData(function(cubes) {
@@ -76,7 +78,7 @@ class DemoDashboard {
 							for (const cube of cubes)
 								data3.addRow([ cube.demoOrdCliId__demoCliCountry, cube.demoOrdTotal, cube.demoOrdTotal / sum * 100 ]);
 
-							new google.visualization.GeoChart(document.getElementById('DemoDashboard-chart3')).draw(data3, {
+							new google.visualization.GeoChart(document.getElementById('demodashboard-chart3')).draw(data3, {
 								sizeAxis: { minValue: 0, maxValue: 100 },
 								region: '150', // Europe
 								colorAxis: { colors: ['#ff9900', '#109618'] }
@@ -86,11 +88,11 @@ class DemoDashboard {
 				};
 
 				// This chart is using a "select" objet
-				const chart4 = d => {
+				const chart4 = _d => {
 					$ui.getUIObject('DemoStats1', 'dashboard_DemoStats1', function(sts) {
-						$('#DemoDashboard-4').append($ui.view.tools.panel({
+						$('#demodashboard-4').append($ui.view.tools.panel({
 							title: sts.metadata.label,
-							content: $('<div/>', { id: 'DemoDashboard-chart4' })
+							content: $('<div/>', { id: 'demodashboard-chart4' })
 						}));
 
 						const data4 = new google.visualization.DataTable();
@@ -108,7 +110,7 @@ class DemoDashboard {
 								data4.addRow(rs);
 							}
 
-							new google.visualization.Table(document.getElementById('DemoDashboard-chart4')).draw(data4, {
+							new google.visualization.Table(document.getElementById('demodashboard-chart4')).draw(data4, {
 								showRowNumber: true,
 								width: '100%', height: '100%'
 							});
@@ -118,12 +120,12 @@ class DemoDashboard {
 
 				// This chart is using a custom data provided by the server-side code
 				const chart5 = d => {
-					$('#DemoDashboard-5').append($ui.view.tools.panel({
+					$('#demodashboard-5').append($ui.view.tools.panel({
 						title: d.title,
-						content: $('<div/>', { id: 'DemoDashboard-chart5' })
+						content: $('<div/>', { id: 'demodashboard-chart5' })
 					}));
 
-					new google.visualization.Gauge(document.getElementById('DemoDashboard-chart5')).draw(google.visualization.arrayToDataTable([
+					new google.visualization.Gauge(document.getElementById('demodashboard-chart5')).draw(google.visualization.arrayToDataTable([
 						[ 'Label', 'Value' ],
 						[ d.data[0].label, d.data[0].value ],
 					]), {
