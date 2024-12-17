@@ -4,8 +4,8 @@
 
 /* global google */
 
-class DemoDashboard { // eslint-disable-line no-unused-vars
-	static render(params, data) {
+var DemoDashboard = DemoDashboard || (() => {
+	function render(params, data) {
 		$ui.loadScript({
 			url: 'https://www.gstatic.com/charts/loader.js',
 			onload: function() {
@@ -147,4 +147,6 @@ class DemoDashboard { // eslint-disable-line no-unused-vars
 			}
 		});
 	}
-}
+
+	return { render: render };
+})();
