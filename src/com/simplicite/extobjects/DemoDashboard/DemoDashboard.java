@@ -13,7 +13,7 @@ public class DemoDashboard extends com.simplicite.webapp.web.ResponsiveExternalO
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public void init(com.simplicite.util.tools.Parameters params) {
+	public void init(Parameters params) {
 		// Add Google charts lib
 		addExtraJS("https://www.gstatic.com/charts/loader.js");
 	}
