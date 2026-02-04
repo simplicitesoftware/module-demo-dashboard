@@ -13,6 +13,12 @@ public class DemoDashboard extends com.simplicite.webapp.web.ResponsiveExternalO
 	private static final long serialVersionUID = 1L;
 
 	@Override
+	public void init(com.simplicite.util.tools.Parameters params) {
+		// Add Google charts lib
+		addExtraJS("https://www.gstatic.com/charts/loader.js");
+	}
+
+	@Override
 	public JSONObject data(Parameters params) {
 		JSONObject chart1 = new JSONObject(); // Data is retreived thru Ajax calls
 		JSONObject chart2 = new JSONObject(); // Data is retreived thru Ajax calls

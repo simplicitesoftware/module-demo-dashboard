@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: DemoDashboard 5
+#             |_| Module: DemoDashboard 6
 basePath: /api
 paths:
   /login:
@@ -345,8 +345,8 @@ paths:
         required: false
         enum:
         - P
-        - V
         - H
+        - V
         - D
         - C
       - in: query
@@ -640,6 +640,7 @@ securityDefinitions:
     type: apiKey
 definitions:
   Error404:
+    description: Not found
     type: object
     properties:
       error:
@@ -651,6 +652,7 @@ definitions:
         enum:
         - 404
   PublicationResult:
+    description: Publication result
     type: object
     properties:
       mime:
@@ -660,6 +662,7 @@ definitions:
         description: Content (plain text or base64 encoded)
         type: string
   PlaceData:
+    description: Place data
     type: object
     properties:
       coord:
@@ -681,6 +684,7 @@ definitions:
         description: 'Label #3'
         type: string
   PlaceMapData:
+    description: Places map data
     type: object
     properties:
       places:
@@ -692,6 +696,7 @@ definitions:
         description: Name
         type: string
   ActionResult:
+    description: Action result
     type: object
     properties:
       result:
@@ -704,14 +709,17 @@ definitions:
         description: Object item with lists of linked objects' items
         type: object
   ArrayOfDemoStats1:
+    description: List of Statistics per statuses
     type: array
     items:
       $ref: '#/definitions/DemoStats1'
   ArrayOfDemoStats2:
+    description: List of Statistics per product
     type: array
     items:
       $ref: '#/definitions/DemoStats2'
   Error400:
+    description: Bad request
     type: object
     properties:
       error:
@@ -723,6 +731,7 @@ definitions:
         enum:
         - 400
   Error401:
+    description: Unauthorized
     type: object
     properties:
       error:
@@ -734,6 +743,7 @@ definitions:
         enum:
         - 401
   Error500:
+    description: Internal server error
     type: object
     properties:
       error:
@@ -745,15 +755,20 @@ definitions:
         enum:
         - 500
   DemoStats1:
+    description: |-
+      Statistics per statuses:
+
+      Statistics per statuses
     type: object
     properties:
       demoOrdStatus:
         description: Order status
         type: string
+        maxLength: 30
         enum:
         - P
-        - V
         - H
+        - V
         - D
         - C
       demoStsTotals:
@@ -765,27 +780,35 @@ definitions:
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
       demoStsQuantities:
         description: Ordered quantities
         type: integer
   DemoStats2:
+    description: |-
+      Statistics per product:
+
+      Stats per products
     type: object
     properties:
       demoStsRowId__demoPrdReference:
         description: Product reference
         type: string
+        maxLength: 10
       demoStsTotals:
         description: Ordered amount
         type: number
       demoStsRowId__demoPrdName:
         description: Product name
         type: string
+        maxLength: 100
       demoStsCount:
         description: Number of orders
         type: integer
       row_id:
         description: Unique technical row ID
         type: string
+        maxLength: 11
       demoStsRowId__demoPrdAvailable:
         description: Available product?
         type: boolean
@@ -795,10 +818,12 @@ definitions:
       demoStsRowId:
         description: Row ID
         type: string
+        maxLength: 11
       demoStsQuantities:
         description: Ordered quantities
         type: integer
   Error403:
+    description: Forbidden
     type: object
     properties:
       error:
@@ -820,7 +845,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module DemoDashboard
   title: DemoDashboard
-  version: '5'
+  version: '6'
 tags:
 - name: DemoStats1
   description: Statistics per statuses

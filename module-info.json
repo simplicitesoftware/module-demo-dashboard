@@ -1,9 +1,9 @@
 {
-    "date": "2026-02-04 14:02:29",
+    "date": "2026-02-04 17:38:06",
     "name": "DemoDashboard",
     "format": "xml",
     "files": ["DemoDashboard.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git"}},
-    "version": "5",
-    "platform": "5.3.83-preview"
+    "version": "6",
+    "platform": "6.3.3-preview"
 }

@@ -7,20 +7,21 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.simplicite.modules</groupId>
-  <version>5-SNAPSHOT</version>
+  <version>6-SNAPSHOT</version>
   <artifactId>DemoDashboard</artifactId>
   <name>DemoDashboard</name>
   <description>Simplicite module: DemoDashboard</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <simplicite.url>https://dev5.dev2.simplicite.io</simplicite.url>
-    <simplicite.version>5.3-SNAPSHOT</simplicite.version>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <simplicite.url>https://dev6.dev2.simplicite.io</simplicite.url>
+    <simplicite.version>6.3-SNAPSHOT</simplicite.version>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.proc>full</maven.compiler.proc>
     <skipTests>true</skipTests>
     <sonar.projectKey>simplicite-modules-DemoDashboard</sonar.projectKey>
     <sonar.projectName>DemoDashboard</sonar.projectName>
-    <sonar.projectVersion>5</sonar.projectVersion>
+    <sonar.projectVersion>6</sonar.projectVersion>
     <sonar.sources>src,resources</sonar.sources>
     <sonar.exclusions>DemoDashboard.xml,DemoDashboard.json,DemoDashboard-*.yml,configuration/**,**.min.js,**.min.css</sonar.exclusions>
     <sonar.coverage.exclusions>resources/**.js,src/**.java</sonar.coverage.exclusions>
@@ -68,11 +69,12 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>10.26.1</version>
+            <version>12.3.1</version>
           </dependency>
         </dependencies>
         <executions>
           <execution>
+            <?m2e ignore?>
             <id>checkstyle-validation</id>
             <phase>validate</phase>
             <goals>
@@ -84,9 +86,10 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>3.6.3</version>
         <executions>
           <execution>
+            <?m2e ignore?>
             <id>npm-install</id>
             <phase>validate</phase>
             <goals>
@@ -100,6 +103,7 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
             </configuration>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>jshint-validation</id>
             <phase>validate</phase>
             <goals>
@@ -114,6 +118,7 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
             </configuration>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>eslint-validation</id>
             <phase>validate</phase>
             <goals>
@@ -128,6 +133,7 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
             </configuration>
           </execution>
           <execution>
+            <?m2e ignore?>
             <id>stylelint-validation</id>
             <phase>validate</phase>
             <goals>
@@ -148,7 +154,7 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
   <repositories>
     <repository>
       <id>simplicite</id>
-      <url>https://platform.simplicite.io/5.3/maven</url>
+      <url>https://platform.simplicite.io/6.3/maven</url>
       <releases><enabled>true</enabled></releases>
       <snapshots><enabled>true</enabled></snapshots>
     </repository>
@@ -171,7 +177,7 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
     <dependency>
       <groupId>com.simplicite.modules</groupId>
       <artifactId>Demo</artifactId>
-      <version>5-SNAPSHOT</version>
+      <version>6-SNAPSHOT</version>
     </dependency>
   </dependencies>
 </project>
