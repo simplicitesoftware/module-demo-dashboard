@@ -13,7 +13,7 @@ public class DemoDashboard extends com.simplicite.webapp.web.ResponsiveExternalO
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	public JSONObject getData(Parameters params) {
+	public JSONObject data(Parameters params) {
 		JSONObject chart1 = new JSONObject(); // Data is retreived thru Ajax calls
 		JSONObject chart2 = new JSONObject(); // Data is retreived thru Ajax calls
 		JSONObject chart3 = new JSONObject(); // Data is retreived thru Ajax calls
