@@ -1076,7 +1076,14 @@ order by prd.prd_name]]></obo_searchspec>
 	<action>upsert</action>
 	<data>
 		<map_domain_id.obd_name>DemoDomain</map_domain_id.obd_name>
-		<map_object/>
+		<map_object>
+			<object>
+				<name>ObjectExternal</name>
+				<data>
+					<obe_name>DemoDashboard</obe_name>
+				</data>
+			</object>
+		</map_object>
 		<map_order>70500</map_order>
 		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
