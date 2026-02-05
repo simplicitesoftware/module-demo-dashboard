@@ -114,7 +114,7 @@ Simplicite.UI.ExternalObjects.DemoDashboard = class extends Simplicite.UI.Extern
 			});
 		};
 
-		// This chart is using a custom data provided by the server-side code
+		// This chart is using a custom data provided by the server-side data() hook
 		const chart5 = async d => {
 			$('#demodashboard-5').append($ui.view.tools.panel({
 				title: d.title,
