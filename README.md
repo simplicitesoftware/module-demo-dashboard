@@ -11,15 +11,18 @@
 `DemoDashboard` module definition
 =================================
 
-### Introduction
+Introduction
+------------
 
-This module contains a custom dashboard for the demo **order management** application.:
+This module contains a custom dashboard for the demo **order management** application.
 
-### Prerequisites
+Prerequisites
+-------------
 
 The `Demo` module **must** be installed and configured before importing this addon module.
 
-### Import
+Import
+------
 
 To import this module:
 
