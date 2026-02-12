@@ -20,7 +20,8 @@
     "branch": "v6"
 }]]></mdl_url>
 		<mdl_type>C</mdl_type>
-		<mdl_comment><![CDATA[### Introduction
+		<mdl_comment><![CDATA[Introduction
+------------
 
 This module contains a custom dashboard for the demo **order management** application.:
 
@@ -28,7 +29,8 @@ This module contains a custom dashboard for the demo **order management** applic
 
 The `Demo` module **must** be installed and configured before importing this addon module.
 
-### Import
+Import
+------
 
 To import this module:
 
