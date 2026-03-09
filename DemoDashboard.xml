@@ -292,8 +292,7 @@ To import this module:
 	sum(ord_quantity) as sts_quantities,
 	sum(ord_total) as sts_totals
 from demo_order
-group by ord_status
-order by ord_status]]></obo_searchspec>
+group by ord_status]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder>-1</obo_exportorder>
 		<obo_distinct>0</obo_distinct>
@@ -371,8 +370,7 @@ order by ord_status]]></obo_searchspec>
 	sum(ord.ord_total) as sts_totals
 from demo_order ord, demo_product prd
 where prd.row_id = ord.ord_prd_id
-group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_stock, prd.prd_available
-order by prd.prd_name]]></obo_searchspec>
+group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_stock, prd.prd_available]]></obo_searchspec>
 		<obo_delspec/>
 		<obo_exportorder>-1</obo_exportorder>
 		<obo_distinct>0</obo_distinct>
@@ -439,7 +437,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_field_id.fld_type>7</obf_field_id.fld_type>
 		<obf_order>10</obf_order>
 		<obf_group_by/>
-		<obf_dfault_order/>
+		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
 		<obf_ref_object_id.obo_name/>
@@ -599,7 +597,7 @@ order by prd.prd_name]]></obo_searchspec>
 		<obf_field_id.fld_type>15</obf_field_id.fld_type>
 		<obf_order>110</obf_order>
 		<obf_group_by/>
-		<obf_dfault_order/>
+		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>demoStsRowId</obf_ref_field_id.fld_name>
 		<obf_ref_object_id.obo_name>DemoProduct</obf_ref_object_id.obo_name>
