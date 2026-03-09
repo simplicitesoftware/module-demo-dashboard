@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<simplicite elements="92" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<simplicite elements="94" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
 <object>
 	<name>Module</name>
 	<action>upsert</action>
@@ -627,7 +627,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_field_id.fld_name>demoPrdReference</obf_field_id.fld_name>
 		<obf_order>110</obf_order>
 		<obf_group_by/>
-		<obf_dfault_order>1</obf_dfault_order>
+		<obf_dfault_order/>
 		<obf_reorder/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>demoStsRowId</obf_ref_field_id.fld_name>
@@ -659,7 +659,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_field_id.fld_name>demoPrdName</obf_field_id.fld_name>
 		<obf_order>120</obf_order>
 		<obf_group_by/>
-		<obf_dfault_order/>
+		<obf_dfault_order>2</obf_dfault_order>
 		<obf_reorder/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>demoStsRowId</obf_ref_field_id.fld_name>
@@ -691,7 +691,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
 		<obf_order>130</obf_order>
 		<obf_group_by/>
-		<obf_dfault_order/>
+		<obf_dfault_order>1</obf_dfault_order>
 		<obf_reorder/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>demoStsRowId</obf_ref_field_id.fld_name>
@@ -1902,6 +1902,46 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
 					<obf_order>100</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Type de produit</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
+					<obf_order>130</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Product type</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
+					<obf_order>130</obf_order>
 				</data>
 			</object>
 		</tsl_object>
