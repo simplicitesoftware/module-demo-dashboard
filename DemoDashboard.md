@@ -46,11 +46,21 @@ Stats per products
 | `demoStsRowId` link to **`DemoProduct`**                     | id                                       |          | yes       |          | -                                                                                |
 | _Ref. `demoStsRowId.demoPrdReference`_                       | _regexp(10)_                             |          |           |          | _Product reference_                                                              |
 | _Ref. `demoStsRowId.demoPrdName`_                            | _char(100)_                              |          |           |          | _Product name_                                                                   |
+| _Ref. `demoStsRowId.demoPrdType`_                            | _enum(50) using `DEMO_PRD_TYPE` list_    |          |           |          | _Product type_                                                                   |
 | _Ref. `demoStsRowId.demoPrdAvailable`_                       | _boolean_                                |          |           |          | _Available product?_                                                             |
 | _Ref. `demoStsRowId.demoPrdStock`_                           | _int(11)_                                |          |           |          | _Current stock for product_                                                      |
 | `demoStsCount`                                               | int(10)                                  |          | yes       |          | -                                                                                |
 | `demoStsQuantities`                                          | int(10)                                  |          | yes       |          | Ordered quantities                                                               |
 | `demoStsTotals`                                              | float(10, 2)                             |          | yes       |          | Ordered amount                                                                   |
+
+### Lists
+
+* `DEMO_PRD_TYPE`
+    - `LAPTOP` Laptop
+    - `DESKTOP` Desktop
+    - `TABLET` Tablet
+    - `SMARTPHONE` Smartphone
+    - `OTHER` Other
 
 ### Custom actions
 

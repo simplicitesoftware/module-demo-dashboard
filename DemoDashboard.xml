@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<simplicite elements="81" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<simplicite elements="90" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
 <object>
 	<name>Module</name>
 	<action>upsert</action>
@@ -383,6 +383,7 @@ order by ord_status]]></obo_searchspec>
 	prd.row_id as row_id,
 	prd.prd_code as prd_code,
 	prd.prd_name as prd_name,
+	prd.prd_type as prd_type,
 	prd.prd_available as prd_available,
 	prd.prd_stock as prd_stock,
 	count(*) as sts_count,
@@ -688,7 +689,7 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
 		<obf_order>130</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
@@ -720,8 +721,40 @@ order by prd.prd_name]]></obo_searchspec>
 	</data>
 	<data>
 		<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-		<obf_field_id.fld_name>demoPrdStock</obf_field_id.fld_name>
+		<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
 		<obf_order>140</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_reorder/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name>demoStsRowId</obf_ref_field_id.fld_name>
+		<obf_ref_object_id.obo_name>DemoProduct</obf_ref_object_id.obo_name>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_fld_exportable/>
+		<obf_fld_uk/>
+		<obf_area_id.ofa_name/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
+		<obf_joined_id.obf_field_id.fld_name>demoStsRowId</obf_joined_id.obf_field_id.fld_name>
+		<obf_joined_id.obf_order>100</obf_joined_id.obf_order>
+	</data>
+	<data>
+		<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+		<obf_field_id.fld_name>demoPrdStock</obf_field_id.fld_name>
+		<obf_order>150</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
 		<obf_reorder/>
@@ -1022,7 +1055,19 @@ order by prd.prd_name]]></obo_searchspec>
 		<ctb_fixedcolors>1</ctb_fixedcolors>
 		<ctb_precision>0</ctb_precision>
 		<ctb_subtotal>0</ctb_subtotal>
-		<ctb_totalcolor/>
+		<ctb_totalcolor>#c7c7c7</ctb_totalcolor>
+		<ctb_caption/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ctb_name>DemoStats2-T1</ctb_name>
+		<ctb_object_id.obo_name>DemoStats2</ctb_object_id.obo_name>
+		<ctb_function>S</ctb_function>
+		<ctb_visible>1</ctb_visible>
+		<ctb_fixedcolors>1</ctb_fixedcolors>
+		<ctb_precision>0</ctb_precision>
+		<ctb_subtotal>0</ctb_subtotal>
+		<ctb_totalcolor>#c7c7c7</ctb_totalcolor>
 		<ctb_caption/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1058,6 +1103,69 @@ order by prd.prd_name]]></obo_searchspec>
 		<cax_objfield_id.obf_field_id.fld_name>demoStsCount</cax_objfield_id.obf_field_id.fld_name>
 		<cax_type>V</cax_type>
 		<cax_order>1</cax_order>
+		<cax_function/>
+		<cax_chart/>
+		<cax_precision/>
+		<cax_subtotal>0</cax_subtotal>
+		<cax_formula/>
+		<cax_hidden>0</cax_hidden>
+		<cax_dategroup/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<cax_unitscale/>
+		<cax_unitfunct/>
+		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
+		<cax_palette/>
+	</data>
+	<data>
+		<cax_crosstab_id.ctb_name>DemoStats2-T1</cax_crosstab_id.ctb_name>
+		<cax_objfield_id.obf_object_id.obo_name>DemoStats2</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_order>130</cax_objfield_id.obf_order>
+		<cax_objfield_id.obf_field_id.fld_name>demoPrdType</cax_objfield_id.obf_field_id.fld_name>
+		<cax_type>C</cax_type>
+		<cax_order>1</cax_order>
+		<cax_function/>
+		<cax_chart/>
+		<cax_precision/>
+		<cax_subtotal>0</cax_subtotal>
+		<cax_formula/>
+		<cax_hidden>0</cax_hidden>
+		<cax_dategroup/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<cax_unitscale/>
+		<cax_unitfunct/>
+		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
+		<cax_palette/>
+	</data>
+	<data>
+		<cax_crosstab_id.ctb_name>DemoStats2-T1</cax_crosstab_id.ctb_name>
+		<cax_objfield_id.obf_object_id.obo_name>DemoStats2</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_order>210</cax_objfield_id.obf_order>
+		<cax_objfield_id.obf_field_id.fld_name>demoStsQuantities</cax_objfield_id.obf_field_id.fld_name>
+		<cax_type>V</cax_type>
+		<cax_order>1</cax_order>
+		<cax_function/>
+		<cax_chart/>
+		<cax_precision/>
+		<cax_subtotal>0</cax_subtotal>
+		<cax_formula/>
+		<cax_hidden>0</cax_hidden>
+		<cax_dategroup/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<cax_unitscale/>
+		<cax_unitfunct/>
+		<cax_unitlabel/>
+		<cax_yaxis>L</cax_yaxis>
+		<cax_palette/>
+	</data>
+	<data>
+		<cax_crosstab_id.ctb_name>DemoStats2-T1</cax_crosstab_id.ctb_name>
+		<cax_objfield_id.obf_object_id.obo_name>DemoStats2</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_order>220</cax_objfield_id.obf_order>
+		<cax_objfield_id.obf_field_id.fld_name>demoStsTotals</cax_objfield_id.obf_field_id.fld_name>
+		<cax_type>V</cax_type>
+		<cax_order>2</cax_order>
 		<cax_function/>
 		<cax_chart/>
 		<cax_precision/>
@@ -1300,6 +1408,34 @@ order by prd.prd_name]]></obo_searchspec>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Stats.</tsl_value>
+		<tsl_plural_value/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>Crosstab</name>
+				<data>
+					<ctb_name>DemoStats2-T1</ctb_name>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Stats. per type</tsl_value>
+		<tsl_plural_value/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>Crosstab</name>
+				<data>
+					<ctb_name>DemoStats2-T1</ctb_name>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Stats. par type</tsl_value>
 		<tsl_plural_value/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1608,7 +1744,7 @@ order by prd.prd_name]]></obo_searchspec>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
-					<obf_order>130</obf_order>
+					<obf_order>140</obf_order>
 				</data>
 			</object>
 		</tsl_object>
@@ -1628,7 +1764,7 @@ order by prd.prd_name]]></obo_searchspec>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
-					<obf_order>130</obf_order>
+					<obf_order>140</obf_order>
 				</data>
 			</object>
 		</tsl_object>
@@ -1688,7 +1824,7 @@ order by prd.prd_name]]></obo_searchspec>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoPrdStock</obf_field_id.fld_name>
-					<obf_order>140</obf_order>
+					<obf_order>150</obf_order>
 				</data>
 			</object>
 		</tsl_object>
@@ -1708,12 +1844,52 @@ order by prd.prd_name]]></obo_searchspec>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoPrdStock</obf_field_id.fld_name>
-					<obf_order>140</obf_order>
+					<obf_order>150</obf_order>
 				</data>
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Stock actuel</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
+					<obf_order>100</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Product type</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
+					<obf_order>100</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Type de produit</tsl_value>
 		<tsl_plural_value/>
 		<tsl_simplehelp/>
 		<tsl_short_value/>

@@ -168,6 +168,16 @@ components:
           description: Product name
           type: string
           maxLength: 100
+        demoStsRowId__demoPrdType:
+          description: Product type
+          type: string
+          maxLength: 50
+          enum:
+          - LAPTOP
+          - DESKTOP
+          - TABLET
+          - SMARTPHONE
+          - OTHER
         demoStsCount:
           description: Number of orders
           type: integer
@@ -182,7 +192,7 @@ components:
           description: Current stock for product
           type: integer
         demoStsRowId:
-          description: Row ID
+          description: Product type
           type: string
           maxLength: 11
         demoStsQuantities:
@@ -910,9 +920,23 @@ paths:
         required: false
       - schema:
           type: string
+          enum:
+          - DemoStats2-T1
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: Pivot table data as cubes?
+        required: false
+      - schema:
+          type: string
         in: query
         name: demoStsRowId
-        description: Search filter for Row ID
+        description: Search filter for Product type
         required: false
       - schema:
           type: string
@@ -925,6 +949,18 @@ paths:
         in: query
         name: demoStsRowId__demoPrdName
         description: Search filter for Product name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - LAPTOP
+          - DESKTOP
+          - TABLET
+          - SMARTPHONE
+          - OTHER
+        in: query
+        name: demoStsRowId__demoPrdType
+        description: Search filter for Product type
         required: false
       - schema:
           type: boolean
