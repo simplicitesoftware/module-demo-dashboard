@@ -40,9 +40,8 @@ To import this module:
 ```json
 {
 	"type": "git",
-	"origin": {
-		"uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git"
-	}
+	"branch": "v6",
+	"origin": { "uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git" }
 }
 ```
 
@@ -478,6 +477,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -487,7 +487,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -510,6 +509,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -519,7 +519,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -542,6 +541,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -551,7 +551,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -574,6 +573,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -583,7 +583,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -606,6 +605,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy>0</obf_copy>
 		<obf_ref_order>20</obf_ref_order>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -615,7 +615,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -638,6 +637,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -647,7 +647,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -670,6 +669,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -679,7 +679,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -702,6 +701,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -711,7 +711,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -734,6 +733,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -743,7 +743,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -766,6 +765,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -775,7 +775,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -798,6 +797,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -807,7 +807,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -830,6 +829,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -839,7 +839,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -862,6 +861,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_ref_export>1</obf_ref_export>
 		<obf_copy/>
 		<obf_ref_order/>
+		<obf_fld_uk/>
 		<obf_fld_visible/>
 		<obf_fld_required/>
 		<obf_fld_updatable/>
@@ -871,7 +871,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
-		<obf_fld_uk/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
