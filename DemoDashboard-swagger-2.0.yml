@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: DemoDashboard 6
+#             |_| Module: DemoDashboard 7
 basePath: /api
 paths:
   /login:
@@ -340,7 +340,7 @@ paths:
         required: false
       - in: query
         name: demoOrdStatus
-        description: Search filter for Order status
+        description: Search filter for Status
         type: string
         required: false
         enum:
@@ -361,7 +361,7 @@ paths:
         required: false
       - in: query
         name: demoStsTotals
-        description: Search filter for Ordered amount
+        description: Search filter for Ordered amounts
         type: number
         required: false
       tags:
@@ -629,12 +629,12 @@ paths:
         - OTHER
       - in: query
         name: demoStsRowId__demoPrdAvailable
-        description: Search filter for Available product?
+        description: Search filter for Available?
         type: boolean
         required: false
       - in: query
         name: demoStsRowId__demoPrdStock
-        description: Search filter for Current stock for product
+        description: Search filter for Current stock
         type: integer
         required: false
       - in: query
@@ -649,7 +649,7 @@ paths:
         required: false
       - in: query
         name: demoStsTotals
-        description: Search filter for Ordered amount
+        description: Search filter for Ordered amounts
         type: number
         required: false
       tags:
@@ -785,7 +785,7 @@ definitions:
     type: object
     properties:
       demoOrdStatus:
-        description: Order status
+        description: Status
         type: string
         maxLength: 30
         enum:
@@ -795,13 +795,13 @@ definitions:
         - D
         - C
       demoStsTotals:
-        description: Ordered amount
+        description: Ordered amounts
         type: number
       demoStsCount:
         description: Number of orders
         type: integer
       row_id:
-        description: Unique technical row ID
+        description: ID
         type: string
         maxLength: 11
       demoStsQuantities:
@@ -819,7 +819,7 @@ definitions:
         type: string
         maxLength: 10
       demoStsTotals:
-        description: Ordered amount
+        description: Ordered amounts
         type: number
       demoStsRowId__demoPrdName:
         description: Product name
@@ -839,14 +839,14 @@ definitions:
         description: Number of orders
         type: integer
       row_id:
-        description: Unique technical row ID
+        description: ID
         type: string
         maxLength: 11
       demoStsRowId__demoPrdAvailable:
-        description: Available product?
+        description: Available?
         type: boolean
       demoStsRowId__demoPrdStock:
-        description: Current stock for product
+        description: Current stock
         type: integer
       demoStsRowId:
         description: Product type
@@ -878,7 +878,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module DemoDashboard
   title: DemoDashboard
-  version: '6'
+  version: '7'
 tags:
 - name: DemoStats1
   description: Statistics per statuses

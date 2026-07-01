@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>DemoDashboard</mdl_name>
-		<mdl_version>6</mdl_version>
+		<mdl_version>7</mdl_version>
 		<mdl_prefix>demo</mdl_prefix>
 		<mdl_url><![CDATA[{
     "maven": {
@@ -13,11 +13,11 @@
         "stylelint": true,
         "jshint": true,
         "checkstyle": true,
-        "repositoryUrl": "https://platform.simplicite.io/6.3/maven"
+        "repositoryUrl": "https://platform.simplicite.io/7.0/maven"
     },
     "origin": {"uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git"},
     "type": "git",
-    "branch": "v6"
+    "branch": "v7"
 }]]></mdl_url>
 		<mdl_type>C</mdl_type>
 		<mdl_comment><![CDATA[Introduction
@@ -117,6 +117,7 @@ To import this module:
 		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>1</fld_type>
+		<fld_clipboard>0</fld_clipboard>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
@@ -135,11 +136,13 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
+		<fld_settings/>
 		<fld_comment/>
 		<fld_classification/>
 		<fld_anon/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
+		<fld_deprecated/>
 	</data>
 	<data>
 		<fld_name>demoStsQuantities</fld_name>
@@ -157,6 +160,7 @@ To import this module:
 		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>1</fld_type>
+		<fld_clipboard>0</fld_clipboard>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
@@ -175,11 +179,13 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
+		<fld_settings/>
 		<fld_comment><![CDATA[Ordered quantities]]></fld_comment>
 		<fld_classification/>
 		<fld_anon/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
+		<fld_deprecated/>
 	</data>
 	<data>
 		<fld_name>demoStsRowId</fld_name>
@@ -197,6 +203,7 @@ To import this module:
 		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>0</fld_type>
+		<fld_clipboard>0</fld_clipboard>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
@@ -215,11 +222,13 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
+		<fld_settings/>
 		<fld_comment/>
 		<fld_classification/>
 		<fld_anon/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
+		<fld_deprecated/>
 	</data>
 	<data>
 		<fld_name>demoStsTotals</fld_name>
@@ -237,6 +246,7 @@ To import this module:
 		<fld_exportable>1</fld_exportable>
 		<fld_tray/>
 		<fld_type>2</fld_type>
+		<fld_clipboard>0</fld_clipboard>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
 		<fld_copy>1</fld_copy>
@@ -255,11 +265,13 @@ To import this module:
 		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
+		<fld_settings/>
 		<fld_comment><![CDATA[Ordered amount]]></fld_comment>
 		<fld_classification/>
 		<fld_anon/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
+		<fld_deprecated/>
 	</data>
 </object>
 <object>
@@ -279,6 +291,8 @@ To import this module:
 		<obe_permalink/>
 		<obe_widget>1</obe_widget>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+		<obe_width/>
+		<obe_height/>
 	</data>
 </object>
 <object>
@@ -1540,44 +1554,6 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 			<object>
 				<name>Field</name>
 				<data>
-					<fld_name>demoStsRowId</fld_name>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Row ID</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_plural_value/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<tsl_tooltip/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>Field</name>
-				<data>
-					<fld_name>demoStsRowId</fld_name>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Row ID</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_plural_value/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<tsl_tooltip/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>Field</name>
-				<data>
 					<fld_name>demoStsTotals</fld_name>
 				</data>
 			</object>
@@ -1603,6 +1579,44 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Montants commandés</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_plural_value/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<tsl_tooltip/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>Field</name>
+				<data>
+					<fld_name>demoStsRowId</fld_name>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Row ID</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_plural_value/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<tsl_tooltip/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>Field</name>
+				<data>
+					<fld_name>demoStsRowId</fld_name>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Row ID</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_plural_value/>
 		<tsl_short_value/>
@@ -1719,6 +1733,86 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 				<name>ObjectFieldSystem</name>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoPrdReference</obf_field_id.fld_name>
+					<obf_order>110</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Product reference</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoPrdReference</obf_field_id.fld_name>
+					<obf_order>110</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Référence produit</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
+					<obf_order>100</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Product type</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
+					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
+					<obf_order>100</obf_order>
+				</data>
+			</object>
+		</tsl_object>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Type de produit</tsl_value>
+		<tsl_plural_value/>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_object>
+			<object>
+				<name>ObjectFieldSystem</name>
+				<data>
+					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
 					<obf_field_id.fld_name>demoPrdName</obf_field_id.fld_name>
 					<obf_order>120</obf_order>
 				</data>
@@ -1759,13 +1853,13 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 				<name>ObjectFieldSystem</name>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
-					<obf_order>140</obf_order>
+					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
+					<obf_order>130</obf_order>
 				</data>
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Available?</tsl_value>
+		<tsl_value>Product type</tsl_value>
 		<tsl_plural_value/>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1779,53 +1873,13 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 				<name>ObjectFieldSystem</name>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
-					<obf_order>140</obf_order>
+					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
+					<obf_order>130</obf_order>
 				</data>
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Disponible ?</tsl_value>
-		<tsl_plural_value/>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_listhelp/>
-		<tsl_placeholder/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>ObjectFieldSystem</name>
-				<data>
-					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdReference</obf_field_id.fld_name>
-					<obf_order>110</obf_order>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Product reference</tsl_value>
-		<tsl_plural_value/>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_listhelp/>
-		<tsl_placeholder/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>ObjectFieldSystem</name>
-				<data>
-					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdReference</obf_field_id.fld_name>
-					<obf_order>110</obf_order>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Référence produit</tsl_value>
+		<tsl_value>Type de produit</tsl_value>
 		<tsl_plural_value/>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1879,13 +1933,13 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 				<name>ObjectFieldSystem</name>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
-					<obf_order>100</obf_order>
+					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
+					<obf_order>140</obf_order>
 				</data>
 			</object>
 		</tsl_object>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Product type</tsl_value>
+		<tsl_value>Available?</tsl_value>
 		<tsl_plural_value/>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
@@ -1899,53 +1953,13 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 				<name>ObjectFieldSystem</name>
 				<data>
 					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoStsRowId</obf_field_id.fld_name>
-					<obf_order>100</obf_order>
+					<obf_field_id.fld_name>demoPrdAvailable</obf_field_id.fld_name>
+					<obf_order>140</obf_order>
 				</data>
 			</object>
 		</tsl_object>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Type de produit</tsl_value>
-		<tsl_plural_value/>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_listhelp/>
-		<tsl_placeholder/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>ObjectFieldSystem</name>
-				<data>
-					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
-					<obf_order>130</obf_order>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Product type</tsl_value>
-		<tsl_plural_value/>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_listhelp/>
-		<tsl_placeholder/>
-		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_object>
-			<object>
-				<name>ObjectFieldSystem</name>
-				<data>
-					<obf_object_id.obo_name>DemoStats2</obf_object_id.obo_name>
-					<obf_field_id.fld_name>demoPrdType</obf_field_id.fld_name>
-					<obf_order>130</obf_order>
-				</data>
-			</object>
-		</tsl_object>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Type de produit</tsl_value>
+		<tsl_value>Disponible ?</tsl_value>
 		<tsl_plural_value/>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
