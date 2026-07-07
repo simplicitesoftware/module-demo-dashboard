@@ -15,9 +15,9 @@ public class DemoStats2 extends ObjectDB {
     private String setAvailable(String prdId, boolean available) {
         try {
             ObjectDB prd = getGrant().getTmpObject("DemoProduct");
-            prd.get(prdId);
+            prd.getTool().getForUpdate(prdId);
             prd.setFieldValue("demoPrdAvailable", available);
-            prd.validateAndSave();
+            prd.getTool().validateAndSave();
             return Message.formatSimpleInfo("OK");
         } catch (Exception e) {
             String msg = "Error while setting availability for product ID " + prdId + " to " + available;
