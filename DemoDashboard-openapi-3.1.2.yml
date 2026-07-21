@@ -128,7 +128,7 @@ components:
       type: object
       properties:
         demoOrdStatus:
-          description: Status
+          description: Order status
           type: string
           maxLength: 30
           enum:
@@ -138,13 +138,13 @@ components:
           - D
           - C
         demoStsTotals:
-          description: Ordered amounts
+          description: Ordered amount
           type: number
         demoStsCount:
           description: Number of orders
           type: integer
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
           maxLength: 11
         demoStsQuantities:
@@ -162,7 +162,7 @@ components:
           type: string
           maxLength: 10
         demoStsTotals:
-          description: Ordered amounts
+          description: Ordered amount
           type: number
         demoStsRowId__demoPrdName:
           description: Product name
@@ -182,14 +182,14 @@ components:
           description: Number of orders
           type: integer
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
           maxLength: 11
         demoStsRowId__demoPrdAvailable:
-          description: Available?
+          description: Available product?
           type: boolean
         demoStsRowId__demoPrdStock:
-          description: Current stock
+          description: Current stock for product
           type: integer
         demoStsRowId:
           description: Product type
@@ -630,7 +630,7 @@ paths:
           - C
         in: query
         name: demoOrdStatus
-        description: Search filter for Status
+        description: Search filter for Order status
         required: false
       - schema:
           type: integer
@@ -648,7 +648,7 @@ paths:
           type: number
         in: query
         name: demoStsTotals
-        description: Search filter for Ordered amounts
+        description: Search filter for Ordered amount
         required: false
       tags:
       - DemoStats1
@@ -966,13 +966,13 @@ paths:
           type: boolean
         in: query
         name: demoStsRowId__demoPrdAvailable
-        description: Search filter for Available?
+        description: Search filter for Available product?
         required: false
       - schema:
           type: integer
         in: query
         name: demoStsRowId__demoPrdStock
-        description: Search filter for Current stock
+        description: Search filter for Current stock for product
         required: false
       - schema:
           type: integer
@@ -990,7 +990,7 @@ paths:
           type: number
         in: query
         name: demoStsTotals
-        description: Search filter for Ordered amounts
+        description: Search filter for Ordered amount
         required: false
       tags:
       - DemoStats2
