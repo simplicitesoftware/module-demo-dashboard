@@ -1,9 +1,11 @@
 {
-    "date": "2026-03-09 14:07:53",
+    "date": "2026-07-22 17:30:23",
     "name": "DemoDashboard",
+    "platform_revision": "5.3.92-preview",
     "format": "xml",
     "files": ["DemoDashboard.xml"],
     "repository": {"origin": {"uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git"}},
     "version": "5",
-    "platform": "5.3.85-preview"
+    "branch": "master",
+    "platform": "5.3"
 }
