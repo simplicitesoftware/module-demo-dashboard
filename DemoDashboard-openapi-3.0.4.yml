@@ -133,8 +133,8 @@ components:
           maxLength: 30
           enum:
           - P
-          - V
           - H
+          - V
           - D
           - C
         demoStsTotals:
@@ -624,8 +624,8 @@ paths:
           type: string
           enum:
           - P
-          - V
           - H
+          - V
           - D
           - C
         in: query
