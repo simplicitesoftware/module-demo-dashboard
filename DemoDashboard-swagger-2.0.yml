@@ -345,8 +345,8 @@ paths:
         required: false
         enum:
         - P
-        - H
         - V
+        - H
         - D
         - C
       - in: query
@@ -790,8 +790,8 @@ definitions:
         maxLength: 30
         enum:
         - P
-        - H
         - V
+        - H
         - D
         - C
       demoStsTotals:
