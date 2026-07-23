@@ -22,7 +22,7 @@ public class DemoStats2 extends ObjectDB {
             prd.setFieldValue("demoPrdAvailable", available);
             prd.validateAndSave();
             return Message.formatSimpleInfo("OK");
-        } catch (GetException|ValidateException|SaveException e) {
+        } catch (GetException | ValidateException | SaveException e) {
             String msg = "Error while setting availability for product ID " + prdId + " to " + available;
             AppLog.error(msg, e, getGrant());
             return msg + ": " + e.getMessage();
