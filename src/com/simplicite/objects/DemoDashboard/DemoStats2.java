@@ -5,6 +5,9 @@ import com.simplicite.util.Message;
 import com.simplicite.util.ObjectDB;
 import com.simplicite.util.Tool;
 import com.simplicite.util.annotations.BusinessObjectAction;
+import com.simplicite.util.exceptions.GetException;
+import com.simplicite.util.exceptions.SaveException;
+import com.simplicite.util.exceptions.ValidateException;
 
 /**
  * Product statistics & availability monitoring
@@ -15,11 +18,11 @@ public class DemoStats2 extends ObjectDB {
     private String setAvailable(String prdId, boolean available) {
         try {
             ObjectDB prd = getGrant().getTmpObject("DemoProduct");
-            prd.getTool().getForUpdate(prdId);
+            prd.getForUpdate(prdId);
             prd.setFieldValue("demoPrdAvailable", available);
-            prd.getTool().validateAndSave();
+            prd.validateAndSave();
             return Message.formatSimpleInfo("OK");
-        } catch (Exception e) {
+        } catch (GetException|ValidateException|SaveException e) {
             String msg = "Error while setting availability for product ID " + prdId + " to " + available;
             AppLog.error(msg, e, getGrant());
             return msg + ": " + e.getMessage();

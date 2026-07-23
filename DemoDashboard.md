@@ -134,8 +134,8 @@ Stats per products
 ### Implemented hooks
 
 * `available`: Action: Make product available
-* `isActionEnable`
 * `notAvailable`: Action: Make product not available
+* `isActionEnable`
 
 External objects
 ----------------

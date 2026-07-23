@@ -1278,6 +1278,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<res_code>demodashboard-module</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/Disposition/default/demodashboard-module.svg</res_image>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1295,6 +1296,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<res_code>demodashboard-module-screenshot</res_code>
 		<res_cached>0</res_cached>
 		<res_file/>
+		<res_file_compiled/>
 		<res_image>resources/Disposition/default/demodashboard-module-screenshot.png</res_image>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1312,6 +1314,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<res_code>STYLES</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/STYLES.less</res_file>
+		<res_file_compiled>resources/ObjectExternal/DemoDashboard/STYLES.min.css</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1329,6 +1332,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<res_code>HTML</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/HTML.html</res_file>
+		<res_file_compiled/>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
@@ -1346,6 +1350,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<res_code>CLASS</res_code>
 		<res_cached>0</res_cached>
 		<res_file>resources/ObjectExternal/DemoDashboard/CLASS.js</res_file>
+		<res_file_compiled>resources/ObjectExternal/DemoDashboard/CLASS.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
