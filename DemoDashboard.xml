@@ -24,32 +24,12 @@
     }
 }]]></mdl_url>
 		<mdl_type>C</mdl_type>
-		<mdl_comment><![CDATA[Introduction
-------------
+		<mdl_comment><![CDATA[This module contains an example of a **custom ** component
+for the demo **order management** application.
 
-This module contains a custom dashboard for the demo **order management** application.:
-
-### Prerequisites
-
-The `Demo` module **must** be installed and configured before importing this addon module.
-
-Import
-------
-
-To import this module:
-
-- Create a module named `DemoDashboard`
-- Set the settings as:
-
-```json
-{
-	"type": "git",
-	"branch": "v6",
-	"origin": { "uri": "https://github.com/simplicitesoftware/module-demo-dashboard.git" }
-}
-```
-
-- Click on the _Import module_ button]]></mdl_comment>
+**Note**: The `Demo` module **must** be installed and configured
+before importing this additional module.]]></mdl_comment>
+		<mdl_lib>build/module-demodashboard.jar</mdl_lib>
 	</data>
 </object>
 <object>
@@ -115,6 +95,7 @@ To import this module:
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
 		<fld_sort>C</fld_sort>
+		<fld_sort_nulls/>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
@@ -147,6 +128,7 @@ To import this module:
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
 		<fld_deprecated/>
+		<fld_compliance>NA</fld_compliance>
 	</data>
 	<data>
 		<fld_name>demoStsQuantities</fld_name>
@@ -158,6 +140,7 @@ To import this module:
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
 		<fld_sort>C</fld_sort>
+		<fld_sort_nulls/>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
@@ -190,6 +173,7 @@ To import this module:
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
 		<fld_deprecated/>
+		<fld_compliance>NA</fld_compliance>
 	</data>
 	<data>
 		<fld_name>demoStsRowId</fld_name>
@@ -201,6 +185,7 @@ To import this module:
 		<fld_research/>
 		<fld_researchreq>0</fld_researchreq>
 		<fld_sort>C</fld_sort>
+		<fld_sort_nulls/>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
@@ -233,6 +218,7 @@ To import this module:
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
 		<fld_deprecated/>
+		<fld_compliance>NA</fld_compliance>
 	</data>
 	<data>
 		<fld_name>demoStsTotals</fld_name>
@@ -244,6 +230,7 @@ To import this module:
 		<fld_research>1</fld_research>
 		<fld_researchreq>0</fld_researchreq>
 		<fld_sort>C</fld_sort>
+		<fld_sort_nulls/>
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum>1</fld_listsum>
@@ -276,6 +263,7 @@ To import this module:
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<fld_incrementsyntax/>
 		<fld_deprecated/>
+		<fld_compliance>NA</fld_compliance>
 	</data>
 </object>
 <object>
@@ -505,6 +493,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -537,6 +526,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -569,6 +559,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -601,6 +592,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -633,6 +625,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -665,6 +658,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -697,6 +691,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -729,6 +724,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -761,6 +757,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -793,6 +790,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name>DemoStats2</obf_joined_id.obf_object_id.obo_name>
@@ -825,6 +823,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -857,6 +856,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -889,6 +889,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_fld_exportable/>
+		<obf_fld_compliance/>
 		<obf_area_id.ofa_name/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 		<obf_joined_id.obf_object_id.obo_name/>
@@ -1499,6 +1500,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1518,6 +1520,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1537,6 +1540,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1556,6 +1560,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1575,6 +1580,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1594,6 +1600,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1613,6 +1620,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1632,6 +1640,7 @@ group by prd.row_id, prd.prd_code, prd.prd_name, prd.prd_type, prd.prd_stock, pr
 		<tsl_placeholder/>
 		<tsl_listhelp/>
 		<tsl_tooltip/>
+		<tsl_compliance/>
 		<row_module_id.mdl_name>DemoDashboard</row_module_id.mdl_name>
 	</data>
 </object>
